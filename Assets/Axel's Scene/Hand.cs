@@ -12,7 +12,10 @@ public class Hand : MonoBehaviour
     }
     void Update()
     {
-        DetectClicks();
+        if (ObjectHeld == null)
+            DetectClicks();
+        else
+            InteractWithObject();
     }
 
     void DetectClicks()
@@ -40,6 +43,16 @@ public class Hand : MonoBehaviour
             {
                 Debug.Log("Raycast did not hit anything!");
             }
+        }
+    }
+
+    // We basically call Interact on the Grabable Object. Grabable is a superclass for all the other items.
+    void InteractWithObject()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            ObjectHeld.GetComponent<Grabable>().Interact();
+            ObjectHeld = null;
         }
     }
 

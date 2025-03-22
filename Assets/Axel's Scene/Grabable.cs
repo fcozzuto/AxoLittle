@@ -32,6 +32,11 @@ public class Grabable : MonoBehaviour
             Debug.Log("Hand is not empty, cannot grab object.");
         }
     }
+
+    public void Interact()
+    {
+        Debug.Log("Interacting");
+    }
 }
 
 
