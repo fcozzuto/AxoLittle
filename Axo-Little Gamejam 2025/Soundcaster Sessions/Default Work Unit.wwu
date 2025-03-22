@@ -28,10 +28,10 @@
 					</ModuleList>
 					<RTPCValueList ShowAll="true"/>
 					<CurrentStateList ShowAll="true">
-						<CurrentStateRef Name="Win_Robot" ID="{C50CF1DF-D8D6-43C3-A454-C522166233C7}"/>
+						<CurrentStateRef Name="Win_Axolotl" ID="{1F057F2C-B279-436F-9123-AE036937E52D}"/>
 					</CurrentStateList>
 					<CurrentSwitchList ShowAll="true">
-						<CurrentSwitchRef Name="Win_Robot" ID="{1BF0B46E-6D76-4B39-BD8C-43D39044C388}"/>
+						<CurrentSwitchRef Name="Win_Axolotl" ID="{80C1679C-83E2-4E26-AE47-99DFA7A171FD}"/>
 					</CurrentSwitchList>
 				</SoundcasterSession>
 			</ChildrenList>

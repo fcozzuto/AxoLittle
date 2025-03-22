@@ -10,7 +10,7 @@
     "Type": "User",
     "GUID": "{1533A11A-F73C-4185-931F-A08FDD914064}",
     "Language": "SFX",
-    "Hash": "{2102918D-1CA1-507B-848B-488984D4CE25}",
+    "Hash": "{1F55C7E5-90E2-6CFE-DB3B-6231E2D8F59F}",
     "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
     "ShortName": "SFX",
     "Path": "SFX.bnk",
@@ -45,7 +45,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "SFX Bounces\\SFX_Boing.wav",
-      "CachePath": "47/{47FB2EC7-B12F-62A7-2ABC-3549A337F34E}.wem"
+      "CachePath": "8A/{8A711BA4-24B2-1204-8003-43DC7974D8E8}.wem"
      },
      {
       "Id": "744753933",
@@ -69,7 +69,7 @@
       "Streaming": "false",
       "Location": "Memory",
       "ShortName": "SFX Bounces\\SFX_3TicExplosion.wav",
-      "CachePath": "A9/{A9B73D89-30AB-2CEC-90BD-CD42B5F41540}.wem"
+      "CachePath": "03/{03C88FC0-6E22-1483-E74D-F1D359D1C769}.wem"
      },
      {
       "Id": "1019748959",
@@ -196,6 +196,6 @@
     ]
    }
   ],
-  "FileHash": "{CED2EA3D-3B0D-5868-2B56-D68EC9CDCFE1}"
+  "FileHash": "{80DD793F-3BBE-B4C8-6898-3A41253EC4A5}"
  }
 }

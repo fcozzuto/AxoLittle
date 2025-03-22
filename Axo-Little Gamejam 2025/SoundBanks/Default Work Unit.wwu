@@ -22,6 +22,20 @@
 					<ObjectExclusionList/>
 					<GameSyncExclusionList/>
 				</SoundBank>
+				<SoundBank Name="SFX" ID="{1533A11A-F73C-4185-931F-A08FDD914064}">
+					<ObjectInclusionList>
+						<ObjectRef Name="SFX_Countdown" ID="{9F14E66E-9A3C-4280-B40C-D4DCEEA65008}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SFX_LightClick" ID="{40E1D0BE-F28B-42C5-836E-B2B8ADE60931}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SFX_HeavyClick" ID="{841415F3-A5F0-4706-ABF3-439644723F7A}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SFX_Explosion" ID="{55E390C2-B353-49D3-A671-1E218ED9410C}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SFX_Slap" ID="{7B01861D-3FFE-4DAE-94DA-07D349876BC5}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SFX_ahh" ID="{A5A4241D-605D-4E83-B411-FE688E42B1F5}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SFX_Boing" ID="{D0442125-4747-4EF5-AD85-2CA086E74AA0}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="SFX_woo" ID="{9EB2EC17-D586-4FD4-BC4E-D4558C38D864}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
 			</ChildrenList>
 		</WorkUnit>
 	</SoundBanks>
