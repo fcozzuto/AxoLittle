@@ -20,11 +20,11 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 6bfb949d9ee6c84ca1741e400e0a8b56
+      guid: b066cbd6fb78f244b17344d632119645
     ParentPath: Virtual Acoustics/Default Work Unit
-    guid: 6bfb949d9ee6c84ca1741e400e0a8b56
+    guid: b066cbd6fb78f244b17344d632119645
     GuidInternal: 
-    m_lastTime: -8584589476962196023
+    m_lastTime: -8584589316656432951
     List: []
   - PhysicalPath: Virtual Acoustics/Factory Acoustic Textures.wwu
     PathAndIcons:
@@ -37,7 +37,7 @@ MonoBehaviour:
     ParentPath: Virtual Acoustics/Factory Acoustic Textures
     guid: 6b663d46a83ca54f8b4a5fef12b883f6
     GuidInternal: 
-    m_lastTime: -8584591220874775808
+    m_lastTime: -8584589316656410199
     List:
     - name: Acoustic_Banner
       guid: f2532d2fccda8e408b8898b1b52a26d6
@@ -299,11 +299,11 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 706f224c520a8f4d9b7b6be918e4dfc0
+      guid: 47e6f224706b24409fdfb8868c5e9cf0
     ParentPath: Master-Mixer Hierarchy/Default Work Unit
-    guid: 706f224c520a8f4d9b7b6be918e4dfc0
+    guid: 47e6f224706b24409fdfb8868c5e9cf0
     GuidInternal: 
-    m_lastTime: -8584589476962438935
+    m_lastTime: -8584589316657127161
     List:
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -314,7 +314,7 @@ MonoBehaviour:
         guid: 00000000000000000000000000000000
       - ElementName: Default Work Unit
         ObjectType: 12
-        guid: 706f224c520a8f4d9b7b6be918e4dfc0
+        guid: 47e6f224706b24409fdfb8868c5e9cf0
       - ElementName: Master Audio Bus
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
@@ -327,25 +327,40 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 1b5500a8a90f624bac8b751125268c83
+      guid: 273e53520c2d6247b5244fad56394252
     ParentPath: SoundBanks/Default Work Unit
-    guid: 1b5500a8a90f624bac8b751125268c83
+    guid: 273e53520c2d6247b5244fad56394252
     GuidInternal: 
-    m_lastTime: -8584589476962378222
-    List: []
-  - PhysicalPath: SoundBanks/Music.wwu
-    PathAndIcons:
-    - ElementName: SoundBanks
-      ObjectType: 5
-      guid: 00000000000000000000000000000000
-    - ElementName: Music
-      ObjectType: 12
-      guid: a188b39f798e894596173f1f7a63c549
-    ParentPath: SoundBanks/Music
-    guid: a188b39f798e894596173f1f7a63c549
-    GuidInternal: 
-    m_lastTime: -8584589473346387775
-    List: []
+    m_lastTime: -8584589316656887552
+    List:
+    - name: Battle_and_Win
+      guid: 87b2964eca63244898d5e40fc931e7c1
+      id: 1950213306
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 273e53520c2d6247b5244fad56394252
+      - ElementName: Battle_and_Win
+        ObjectType: 7
+        guid: 87b2964eca63244898d5e40fc931e7c1
+      Path: SoundBanks/Default Work Unit/Battle_and_Win
+    - name: Credit_music
+      guid: 0ac10ec3b91a654eabde2fe628c38df5
+      id: 832601146
+      PathAndIcons:
+      - ElementName: SoundBanks
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 273e53520c2d6247b5244fad56394252
+      - ElementName: Credit_music
+        ObjectType: 7
+        guid: 0ac10ec3b91a654eabde2fe628c38df5
+      Path: SoundBanks/Default Work Unit/Credit_music
   EventWwu:
   - PhysicalPath: Events/Default Work Unit.wwu
     PathAndIcons:
@@ -354,12 +369,131 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: e76525f9c00ad24b86a206ee2dfe3d31
+      guid: a57dce7566170a42990bb0871b065e0c
     ParentPath: Events/Default Work Unit
-    guid: e76525f9c00ad24b86a206ee2dfe3d31
+    guid: a57dce7566170a42990bb0871b065e0c
     GuidInternal: 
-    m_lastTime: -8584589476962414553
-    List: []
+    m_lastTime: -8584589309974424568
+    List:
+    - name: Battle_Play
+      guid: a2191f08bc400841a838092f21bfa6d1
+      id: 2534386424
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a57dce7566170a42990bb0871b065e0c
+      - ElementName: Battle_Play
+        ObjectType: 3
+        guid: a2191f08bc400841a838092f21bfa6d1
+      Path: Events/Default Work Unit/Battle_Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Battle_Stop
+      guid: 72993059e8189746a0941ad97c7c9366
+      id: 611866442
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a57dce7566170a42990bb0871b065e0c
+      - ElementName: Battle_Stop
+        ObjectType: 3
+        guid: 72993059e8189746a0941ad97c7c9366
+      Path: Events/Default Work Unit/Battle_Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Credit_Play
+      guid: 67616764a5a17e4d9acc76aad465f1b8
+      id: 1445688307
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a57dce7566170a42990bb0871b065e0c
+      - ElementName: Credit_Play
+        ObjectType: 3
+        guid: 67616764a5a17e4d9acc76aad465f1b8
+      Path: Events/Default Work Unit/Credit_Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Credit_Stop
+      guid: b412a8910741cf47ae7496699fbb222d
+      id: 575810265
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a57dce7566170a42990bb0871b065e0c
+      - ElementName: Credit_Stop
+        ObjectType: 3
+        guid: b412a8910741cf47ae7496699fbb222d
+      Path: Events/Default Work Unit/Credit_Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Win_Axolotl_Play
+      guid: 7ca22f891310bf45b893c30e639df2ab
+      id: 55536622
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a57dce7566170a42990bb0871b065e0c
+      - ElementName: Win_Axolotl_Play
+        ObjectType: 3
+        guid: 7ca22f891310bf45b893c30e639df2ab
+      Path: Events/Default Work Unit/Win_Axolotl_Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Win_Robot_Play
+      guid: 707898a086468c4f8664fb280ae7004f
+      id: 1339265993
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a57dce7566170a42990bb0871b065e0c
+      - ElementName: Win_Robot_Play
+        ObjectType: 3
+        guid: 707898a086468c4f8664fb280ae7004f
+      Path: Events/Default Work Unit/Win_Robot_Play
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
+    - name: Win_Stop
+      guid: 7e7e7a86f71fba45b8127d0dc305871e
+      id: 16679072
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: a57dce7566170a42990bb0871b065e0c
+      - ElementName: Win_Stop
+        ObjectType: 3
+        guid: 7e7e7a86f71fba45b8127d0dc305871e
+      Path: Events/Default Work Unit/Win_Stop
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     PathAndIcons:
@@ -368,11 +502,11 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 00b462b24327814880e3bbaa6c508c5b
+      guid: 8f52d17751802248a6da94434899fd2c
     ParentPath: Game Parameters/Default Work Unit
-    guid: 00b462b24327814880e3bbaa6c508c5b
+    guid: 8f52d17751802248a6da94434899fd2c
     GuidInternal: 
-    m_lastTime: -8584589476962366860
+    m_lastTime: -8584589316656874486
     List: []
   - PhysicalPath: Game Parameters/Factory Soundseed Air Game Syncs.wwu
     PathAndIcons:
@@ -385,7 +519,7 @@ MonoBehaviour:
     ParentPath: Game Parameters/Factory Soundseed Air Game Syncs
     guid: 5577163b42fb8b4598bf96f557afb3b9
     GuidInternal: 
-    m_lastTime: -8584591220854775808
+    m_lastTime: -8584589316656849247
     List:
     - name: SS_Air_Fear
       guid: 59062ef746431c4ea1b1dab46a05101e
@@ -535,12 +669,78 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: 1abf76d803f6f4459dbb18f892eb7d5e
+      guid: 7720887ab1add7428016e21ae6d5b1d9
     ParentPath: States/Default Work Unit
-    guid: 1abf76d803f6f4459dbb18f892eb7d5e
+    guid: 7720887ab1add7428016e21ae6d5b1d9
     GuidInternal: 
-    m_lastTime: -8584589476962392474
-    List: []
+    m_lastTime: -8584589316656906086
+    List:
+    - name: Winning
+      guid: ecd5f470c991c94bb0bb7fc2a4343e7c
+      id: 2996998095
+      PathAndIcons:
+      - ElementName: States
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 7720887ab1add7428016e21ae6d5b1d9
+      - ElementName: Winning
+        ObjectType: 9
+        guid: ecd5f470c991c94bb0bb7fc2a4343e7c
+      Path: States/Default Work Unit/Winning
+      values:
+      - name: None
+        guid: 688054ff99e5564b8dffd0f7135e3730
+        id: 748895195
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 7720887ab1add7428016e21ae6d5b1d9
+        - ElementName: Winning
+          ObjectType: 9
+          guid: ecd5f470c991c94bb0bb7fc2a4343e7c
+        - ElementName: None
+          ObjectType: 8
+          guid: 688054ff99e5564b8dffd0f7135e3730
+      - name: Win_Axolotl
+        guid: 2c7f051f79b26f439123ae036937e52d
+        id: 3565959805
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 7720887ab1add7428016e21ae6d5b1d9
+        - ElementName: Winning
+          ObjectType: 9
+          guid: ecd5f470c991c94bb0bb7fc2a4343e7c
+        - ElementName: Win_Axolotl
+          ObjectType: 8
+          guid: 2c7f051f79b26f439123ae036937e52d
+      - name: Win_Robot
+        guid: dff10cc5d6d8c343a454c522166233c7
+        id: 1619244480
+        PathAndIcons:
+        - ElementName: States
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 7720887ab1add7428016e21ae6d5b1d9
+        - ElementName: Winning
+          ObjectType: 9
+          guid: ecd5f470c991c94bb0bb7fc2a4343e7c
+        - ElementName: Win_Robot
+          ObjectType: 8
+          guid: dff10cc5d6d8c343a454c522166233c7
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   SwitchWwu:
   - PhysicalPath: Switches/Default Work Unit.wwu
     PathAndIcons:
@@ -549,12 +749,62 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: c56745f9d1e4ca459a0f525de1da5521
+      guid: 220df34b3b7a15478d6416bcb036ecd0
     ParentPath: Switches/Default Work Unit
-    guid: c56745f9d1e4ca459a0f525de1da5521
+    guid: 220df34b3b7a15478d6416bcb036ecd0
     GuidInternal: 
-    m_lastTime: -8584589476962403574
-    List: []
+    m_lastTime: -8584589316656920846
+    List:
+    - name: Win_scene
+      guid: 0b15fd1ae7ae9147941c1dbd7fbdd2d3
+      id: 3095016256
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 220df34b3b7a15478d6416bcb036ecd0
+      - ElementName: Win_scene
+        ObjectType: 11
+        guid: 0b15fd1ae7ae9147941c1dbd7fbdd2d3
+      Path: Switches/Default Work Unit/Win_scene
+      values:
+      - name: Win_Axolotl
+        guid: 9c67c180e283264eae4799dfa7a171fd
+        id: 3565959805
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 220df34b3b7a15478d6416bcb036ecd0
+        - ElementName: Win_scene
+          ObjectType: 11
+          guid: 0b15fd1ae7ae9147941c1dbd7fbdd2d3
+        - ElementName: Win_Axolotl
+          ObjectType: 10
+          guid: 9c67c180e283264eae4799dfa7a171fd
+      - name: Win_Robot
+        guid: 6eb4f01b766d394bbd8c43d39044c388
+        id: 1619244480
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 220df34b3b7a15478d6416bcb036ecd0
+        - ElementName: Win_scene
+          ObjectType: 11
+          guid: 0b15fd1ae7ae9147941c1dbd7fbdd2d3
+        - ElementName: Win_Robot
+          ObjectType: 10
+          guid: 6eb4f01b766d394bbd8c43d39044c388
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
   TriggerWwu:
   - PhysicalPath: Triggers/Default Work Unit.wwu
     PathAndIcons:
@@ -563,11 +813,11 @@ MonoBehaviour:
       guid: 00000000000000000000000000000000
     - ElementName: Default Work Unit
       ObjectType: 12
-      guid: e8a704199c82034483803bfb6f7444d0
+      guid: 5c3ee03de9d902478e0a34a373df1c17
     ParentPath: Triggers/Default Work Unit
-    guid: e8a704199c82034483803bfb6f7444d0
+    guid: 5c3ee03de9d902478e0a34a373df1c17
     GuidInternal: 
-    m_lastTime: -8584589476962299677
+    m_lastTime: -8584589316656398957
     List: []
   ExpandedFileSystemItemIds: 
   ExpandedWaapiItemIds: 
