@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{52533E27-2D0C-4762-B524-4FAD56394252}" SchemaVersion="123">
+	<SoundBanks>
+		<WorkUnit Name="Default Work Unit" ID="{52533E27-2D0C-4762-B524-4FAD56394252}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundBank Name="Credit_music" ID="{C30EC10A-1AB9-4E65-ABDE-2FE628C38DF5}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Credit_Stop" ID="{91A812B4-4107-47CF-AE74-96699FBB222D}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Credit_Play" ID="{64676167-A1A5-4D7E-9ACC-76AAD465F1B8}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+				<SoundBank Name="Battle_and_Win" ID="{4E96B287-63CA-4824-98D5-E40FC931E7C1}">
+					<ObjectInclusionList>
+						<ObjectRef Name="Battle_Play" ID="{081F19A2-40BC-4108-A838-092F21BFA6D1}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Win_Stop" ID="{867A7E7E-1FF7-45BA-B812-7D0DC305871E}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Win_Axolotl_Play" ID="{892FA27C-1013-45BF-B893-C30E639DF2AB}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Battle_Stop" ID="{59309972-18E8-4697-A094-1AD97C7C9366}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Win_Robot_Play" ID="{A0987870-4686-4F8C-8664-FB280AE7004F}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}" Origin="Manual" Filter="7"/>
+					</ObjectInclusionList>
+					<ObjectExclusionList/>
+					<GameSyncExclusionList/>
+				</SoundBank>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundBanks>
+</WwiseDocument>

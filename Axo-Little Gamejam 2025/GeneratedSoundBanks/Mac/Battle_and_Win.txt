@@ -1,0 +1,21 @@
+Event	ID	Name			Wwise Object Path	Notes
+	16679072	Win_Stop			\Default Work Unit\Win_Stop	
+	55536622	Win_Axolotl_Play			\Default Work Unit\Win_Axolotl_Play	
+	611866442	Battle_Stop			\Default Work Unit\Battle_Stop	
+	1339265993	Win_Robot_Play			\Default Work Unit\Win_Robot_Play	
+	2534386424	Battle_Play			\Default Work Unit\Battle_Play	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3095016256	Win_scene			\Default Work Unit\Win_scene	
+
+Switch	ID	Name	Switch Group			Notes
+	1619244480	Win_Robot	Win_scene			
+	3565959805	Win_Axolotl	Win_scene			
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	47606465	Axo-little_Gameplay_4-4_125bpm_17m_0p	Y:\Documents\WwiseProjects\Axo-Little Gamejam 2025\.cache\FF\{FFC060B9-DB54-061A-2803-471CDF45D627}.wem		\Interactive Music Hierarchy\Default Work Unit\Gameplay\Axo-little_Gameplay_4-4_125bpm_17m_0p\Axo-little_Gameplay_4-4_125bpm_17m_0p		6267040
+	275702580	RobotWin_Loop_170BPM_22m_4-4	Y:\Documents\WwiseProjects\Axo-Little Gamejam 2025\.cache\F0\{F03C3FFD-85D9-4F32-D7C0-9238297BDB92}.wem		\Interactive Music Hierarchy\Default Work Unit\Win\Win_Robot\RobotWin_Loop_170BPM_22m_4-4\RobotWin_Loop_170BPM_22m_4-4		5963388
+	691580234	Axolot-Win_Intro_140_1Temps_4-4	Y:\Documents\WwiseProjects\Axo-Little Gamejam 2025\.cache\20\{20C84093-1179-FEF6-6483-73311233A259}.wem		\Interactive Music Hierarchy\Default Work Unit\Win\Win_Axolotl\Axolot-Win_Intro_140_1Temps_4-4\Axolot-Win_Intro_140_1Temps_4-4		82448
+	769580221	RobotWin_Intro_170BPM_22m_4-4	Y:\Documents\WwiseProjects\Axo-Little Gamejam 2025\.cache\B2\{B2F9A3EA-BA4D-05CF-D3FB-75AF818F845F}.wem		\Interactive Music Hierarchy\Default Work Unit\Win\Win_Robot\RobotWin_Intro_170BPM_22m_4-4\RobotWin_Intro_170BPM_22m_4-4		2304096
+	792507832	Axolot_Win_Loop_140_20m_4-4	Y:\Documents\WwiseProjects\Axo-Little Gamejam 2025\.cache\4B\{4BA2FDA6-600F-65A0-1B75-35B4E170DBD9}.wem		\Interactive Music Hierarchy\Default Work Unit\Win\Win_Axolotl\Axolot_Win_Loop_140_20m_4-4\Axolot_Win_Loop_140_20m_4-4		6583128
+

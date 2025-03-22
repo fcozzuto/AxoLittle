@@ -1,0 +1,165 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Mac",
+  "BasePlatform": "Mac",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "832601146",
+    "Type": "User",
+    "GUID": "{C30EC10A-1AB9-4E65-ABDE-2FE628C38DF5}",
+    "Language": "SFX",
+    "Hash": "{98E7D13D-A951-23CE-756A-65782585D8A8}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Credit_music",
+    "ShortName": "Credit_music",
+    "Path": "Credit_music.bnk",
+    "Media": [
+     {
+      "Id": "72713425",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "pad.wav",
+      "CachePath": "58/{58C535EE-FB2D-0A07-6229-D70FA4610C21}.wem"
+     },
+     {
+      "Id": "331023587",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Synth arp.wav",
+      "CachePath": "AB/{AB8A0945-B628-7A99-41FB-AA011A8195BC}.wem"
+     },
+     {
+      "Id": "443636063",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Piano_1.wav",
+      "CachePath": "97/{971AD63E-DE5E-3CF5-A905-E38B088BE826}.wem"
+     },
+     {
+      "Id": "563070260",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "bass.wav",
+      "CachePath": "D8/{D84FA621-3F88-0D11-801E-85C71E60C695}.wem"
+     },
+     {
+      "Id": "587263876",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Piano.wav",
+      "CachePath": "2E/{2E67F1FB-3905-13C1-CE9D-4C42816C19FC}.wem"
+     },
+     {
+      "Id": "647320485",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Pluck_1.wav",
+      "CachePath": "FA/{FAB447E5-3FAA-BCBB-2179-C04332599CF3}.wem"
+     },
+     {
+      "Id": "670353642",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Pluck.wav",
+      "CachePath": "AC/{ACB97BCF-AFDA-1385-5813-87D4DF24C1F5}.wem"
+     },
+     {
+      "Id": "681626540",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "bass_1.wav",
+      "CachePath": "F7/{F733B119-A424-DD68-CAA1-602C9ABA1C52}.wem"
+     },
+     {
+      "Id": "906498497",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "drum kit.wav",
+      "CachePath": "75/{75D4D3B2-00C1-9A70-EB0D-5CA4A1FA131F}.wem"
+     },
+     {
+      "Id": "982606202",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Inst 12.wav",
+      "CachePath": "B9/{B9CC883A-C59E-4859-EC95-12AF2B23F2A4}.wem"
+     },
+     {
+      "Id": "1007340146",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "MainMenu_intro_80bpm_12mes.wav",
+      "CachePath": "1F/{1F1EF7B9-6E2B-1962-AB47-A800B269A3C9}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "1445688307",
+      "Name": "Credit_Play",
+      "ObjectPath": "\\Events\\Default Work Unit\\Credit_Play",
+      "GUID": "{64676167-A1A5-4D7E-9ACC-76AAD465F1B8}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "72713425"
+       },
+       {
+        "Id": "331023587"
+       },
+       {
+        "Id": "443636063"
+       },
+       {
+        "Id": "563070260"
+       },
+       {
+        "Id": "587263876"
+       },
+       {
+        "Id": "647320485"
+       },
+       {
+        "Id": "670353642"
+       },
+       {
+        "Id": "681626540"
+       },
+       {
+        "Id": "906498497"
+       },
+       {
+        "Id": "982606202"
+       },
+       {
+        "Id": "1007340146"
+       }
+      ]
+     },
+     {
+      "Id": "575810265",
+      "Name": "Credit_Stop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Credit_Stop",
+      "GUID": "{91A812B4-4107-47CF-AE74-96699FBB222D}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ]
+   }
+  ],
+  "FileHash": "{D41C4500-A78F-235D-53F6-E4AA995FD35E}"
+ }
+}

@@ -1,0 +1,265 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "1950213306",
+    "Type": "User",
+    "GUID": "{4E96B287-63CA-4824-98D5-E40FC931E7C1}",
+    "Language": "SFX",
+    "Hash": "{A6BA9FE7-C5C1-0C27-547B-FF880E6DCF21}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\Battle_and_Win",
+    "ShortName": "Battle_and_Win",
+    "Path": "Battle_and_Win.bnk",
+    "Media": [
+     {
+      "Id": "47606465",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Axo-little_Gameplay_4-4_125bpm_17m_0p.wav",
+      "CachePath": "FF/{FFC060B9-DB54-061A-2803-471CDF45D627}.wem"
+     },
+     {
+      "Id": "275702580",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RobotWin_Loop_170BPM_22m_4-4.wav",
+      "CachePath": "F0/{F03C3FFD-85D9-4F32-D7C0-9238297BDB92}.wem"
+     },
+     {
+      "Id": "691580234",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Axolot-Win_Intro_140_1Temps_4-4.wav",
+      "CachePath": "20/{20C84093-1179-FEF6-6483-73311233A259}.wem"
+     },
+     {
+      "Id": "769580221",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "RobotWin_Intro_170BPM_22m_4-4.wav",
+      "CachePath": "B2/{B2F9A3EA-BA4D-05CF-D3FB-75AF818F845F}.wem"
+     },
+     {
+      "Id": "792507832",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "Axolot_Win_Loop_140_20m_4-4.wav",
+      "CachePath": "4B/{4BA2FDA6-600F-65A0-1B75-35B4E170DBD9}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "2534386424",
+      "Name": "Battle_Play",
+      "ObjectPath": "\\Events\\Default Work Unit\\Battle_Play",
+      "GUID": "{081F19A2-40BC-4108-A838-092F21BFA6D1}",
+      "DurationType": "Infinite",
+      "MediaRefs": [
+       {
+        "Id": "47606465"
+       }
+      ]
+     },
+     {
+      "Id": "611866442",
+      "Name": "Battle_Stop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Battle_Stop",
+      "GUID": "{59309972-18E8-4697-A094-1AD97C7C9366}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     },
+     {
+      "Id": "55536622",
+      "Name": "Win_Axolotl_Play",
+      "ObjectPath": "\\Events\\Default Work Unit\\Win_Axolotl_Play",
+      "GUID": "{892FA27C-1013-45BF-B893-C30E639DF2AB}",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3095016256",
+         "Id": "3565959805",
+         "GUID": "{80C1679C-83E2-4E26-AE47-99DFA7A171FD}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "691580234"
+         },
+         {
+          "Id": "792507832"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3095016256",
+         "Id": "1619244480",
+         "GUID": "{1BF0B46E-6D76-4B39-BD8C-43D39044C388}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "275702580"
+         },
+         {
+          "Id": "769580221"
+         }
+        ]
+       }
+      ],
+      "ActionSetState": [
+       {
+        "GroupId": "2996998095",
+        "Id": "3565959805",
+        "Name": "Win_Axolotl",
+        "ObjectPath": "\\States\\Default Work Unit\\Winning\\Win_Axolotl",
+        "GUID": "{1F057F2C-B279-436F-9123-AE036937E52D}"
+       }
+      ],
+      "ActionSetSwitch": [
+       {
+        "GroupId": "3095016256",
+        "Id": "3565959805",
+        "Name": "Win_Axolotl",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Win_scene\\Win_Axolotl",
+        "GUID": "{80C1679C-83E2-4E26-AE47-99DFA7A171FD}"
+       }
+      ]
+     },
+     {
+      "Id": "1339265993",
+      "Name": "Win_Robot_Play",
+      "ObjectPath": "\\Events\\Default Work Unit\\Win_Robot_Play",
+      "GUID": "{A0987870-4686-4F8C-8664-FB280AE7004F}",
+      "DurationType": "Infinite",
+      "SwitchContainers": [
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3095016256",
+         "Id": "3565959805",
+         "GUID": "{80C1679C-83E2-4E26-AE47-99DFA7A171FD}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "691580234"
+         },
+         {
+          "Id": "792507832"
+         }
+        ]
+       },
+       {
+        "SwitchValue": {
+         "GroupType": "Switch",
+         "GroupId": "3095016256",
+         "Id": "1619244480",
+         "GUID": "{1BF0B46E-6D76-4B39-BD8C-43D39044C388}"
+        },
+        "MediaRefs": [
+         {
+          "Id": "275702580"
+         },
+         {
+          "Id": "769580221"
+         }
+        ]
+       }
+      ],
+      "ActionSetState": [
+       {
+        "GroupId": "2996998095",
+        "Id": "1619244480",
+        "Name": "Win_Robot",
+        "ObjectPath": "\\States\\Default Work Unit\\Winning\\Win_Robot",
+        "GUID": "{C50CF1DF-D8D6-43C3-A454-C522166233C7}"
+       }
+      ],
+      "ActionSetSwitch": [
+       {
+        "GroupId": "3095016256",
+        "Id": "1619244480",
+        "Name": "Win_Robot",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Win_scene\\Win_Robot",
+        "GUID": "{1BF0B46E-6D76-4B39-BD8C-43D39044C388}"
+       }
+      ]
+     },
+     {
+      "Id": "16679072",
+      "Name": "Win_Stop",
+      "ObjectPath": "\\Events\\Default Work Unit\\Win_Stop",
+      "GUID": "{867A7E7E-1FF7-45BA-B812-7D0DC305871E}",
+      "MaxAttenuation": "0",
+      "DurationType": "OneShot",
+      "DurationMin": "0",
+      "DurationMax": "0"
+     }
+    ],
+    "StateGroups": [
+     {
+      "Id": "2996998095",
+      "Name": "Winning",
+      "ObjectPath": "\\States\\Default Work Unit\\Winning",
+      "GUID": "{70F4D5EC-91C9-4BC9-B0BB-7FC2A4343E7C}",
+      "States": [
+       {
+        "Id": "748895195",
+        "Name": "None",
+        "ObjectPath": "\\States\\Default Work Unit\\Winning\\None",
+        "GUID": "{FF548068-E599-4B56-8DFF-D0F7135E3730}"
+       },
+       {
+        "Id": "1619244480",
+        "Name": "Win_Robot",
+        "ObjectPath": "\\States\\Default Work Unit\\Winning\\Win_Robot",
+        "GUID": "{C50CF1DF-D8D6-43C3-A454-C522166233C7}"
+       },
+       {
+        "Id": "3565959805",
+        "Name": "Win_Axolotl",
+        "ObjectPath": "\\States\\Default Work Unit\\Winning\\Win_Axolotl",
+        "GUID": "{1F057F2C-B279-436F-9123-AE036937E52D}"
+       }
+      ]
+     }
+    ],
+    "SwitchGroups": [
+     {
+      "Id": "3095016256",
+      "Name": "Win_scene",
+      "ObjectPath": "\\Switches\\Default Work Unit\\Win_scene",
+      "GUID": "{1AFD150B-AEE7-4791-941C-1DBD7FBDD2D3}",
+      "Switches": [
+       {
+        "Id": "1619244480",
+        "Name": "Win_Robot",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Win_scene\\Win_Robot",
+        "GUID": "{1BF0B46E-6D76-4B39-BD8C-43D39044C388}"
+       },
+       {
+        "Id": "3565959805",
+        "Name": "Win_Axolotl",
+        "ObjectPath": "\\Switches\\Default Work Unit\\Win_scene\\Win_Axolotl",
+        "GUID": "{80C1679C-83E2-4E26-AE47-99DFA7A171FD}"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{BAF858C1-1B40-E57F-BE60-824A0FCDD5DF}"
+ }
+}
