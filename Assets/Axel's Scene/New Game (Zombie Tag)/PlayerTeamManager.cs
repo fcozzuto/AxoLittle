@@ -7,6 +7,7 @@ public class PlayerTeamManager : MonoBehaviour
     public float ConversionRadius = 1f;
 
     private Civilian[] civilians;
+    public GameObject followPoint;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

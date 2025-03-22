@@ -6,6 +6,10 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
 
+    public GameObject FollowPoint;
+    public GameObject FollowPointL;
+    public GameObject FollowPointR;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>(); // Get the Rigidbody2D component
@@ -18,6 +22,12 @@ public class PlayerMovement : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");   // W/S or Up/Down Arrow
 
         moveInput = new Vector2(moveX, moveY).normalized; // Normalize to prevent diagonal speed boost
+
+        if (moveX == 1)
+            FollowPoint.transform.position = FollowPointL.transform.position;
+        else if (moveX == -1)
+            FollowPoint.transform.position = FollowPointR.transform.position;
+
     }
 
     void FixedUpdate()

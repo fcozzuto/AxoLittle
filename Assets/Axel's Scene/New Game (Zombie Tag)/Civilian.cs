@@ -8,12 +8,16 @@ public class Civilian : MonoBehaviour
     public float Loyalty = 0.1f;
 
     private SpriteRenderer spriteRenderer;
+    private CivilianAI civilianAI;
+    private PlayerTeamManager[] playerTeamManagers;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Team = null;
         spriteRenderer = GetComponent<SpriteRenderer>();
+        civilianAI = GetComponent<CivilianAI>();
+        playerTeamManagers = FindObjectsOfType<PlayerTeamManager>();
     }
 
     // Update is called once per frame
@@ -93,6 +97,13 @@ public class Civilian : MonoBehaviour
             Team = "UDS";
             spriteRenderer.color = new Color(0.282f, 0.416f, 0.361f); // RGB(72, 106, 92)
             Debug.Log("Switched to the UDS Team");
+        }
+
+        // Debugging: Print the names of all found civilians
+        foreach (var player in playerTeamManagers)
+        {
+            if(player.Team == Team)
+                civilianAI.setFollow(player);
         }
     }
 }
