@@ -5,12 +5,20 @@
 			<PropertyList>
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="Y:\Desktop\Axo-little Music\BotWin\"/>
 				<Property Name="Event Action List\{081F19A2-40BC-4108-A838-092F21BFA6D1}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{40E1D0BE-F28B-42C5-836E-B2B8ADE60931}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{55E390C2-B353-49D3-A671-1E218ED9410C}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{59309972-18E8-4697-A094-1AD97C7C9366}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{64676167-A1A5-4D7E-9ACC-76AAD465F1B8}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{7B01861D-3FFE-4DAE-94DA-07D349876BC5}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{841415F3-A5F0-4706-ABF3-439644723F7A}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{867A7E7E-1FF7-45BA-B812-7D0DC305871E}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{892FA27C-1013-45BF-B893-C30E639DF2AB}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{91A812B4-4107-47CF-AE74-96699FBB222D}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{9EB2EC17-D586-4FD4-BC4E-D4558C38D864}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{9F14E66E-9A3C-4280-B40C-D4DCEEA65008}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{A0987870-4686-4F8C-8664-FB280AE7004F}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{A5A4241D-605D-4E83-B411-FE688E42B1F5}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{D0442125-4747-4EF5-AD85-2CA086E74AA0}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="EventView\FilterMode2" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">

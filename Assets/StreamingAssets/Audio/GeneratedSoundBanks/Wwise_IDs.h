@@ -17,6 +17,14 @@ namespace AK
         static const AkUniqueID BATTLE_STOP = 611866442U;
         static const AkUniqueID CREDIT_PLAY = 1445688307U;
         static const AkUniqueID CREDIT_STOP = 575810265U;
+        static const AkUniqueID SFX_AHH = 532397790U;
+        static const AkUniqueID SFX_BOING = 2202050608U;
+        static const AkUniqueID SFX_COUNTDOWN = 2484918906U;
+        static const AkUniqueID SFX_EXPLOSION = 992806370U;
+        static const AkUniqueID SFX_HEAVYCLICK = 2178575926U;
+        static const AkUniqueID SFX_LIGHTCLICK = 4151166929U;
+        static const AkUniqueID SFX_SLAP = 682607339U;
+        static const AkUniqueID SFX_WOO = 579184922U;
         static const AkUniqueID WIN_AXOLOTL_PLAY = 55536622U;
         static const AkUniqueID WIN_ROBOT_PLAY = 1339265993U;
         static const AkUniqueID WIN_STOP = 16679072U;
@@ -72,6 +80,7 @@ namespace AK
         static const AkUniqueID INIT = 1355168291U;
         static const AkUniqueID BATTLE_AND_WIN = 1950213306U;
         static const AkUniqueID CREDIT_MUSIC = 832601146U;
+        static const AkUniqueID SFX = 393239870U;
     } // namespace BANKS
 
     namespace BUSSES

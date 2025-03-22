@@ -1,0 +1,201 @@
+{
+ "SoundBanksInfo": {
+  "Platform": "Windows",
+  "BasePlatform": "Windows",
+  "SchemaVersion": "16",
+  "SoundBankVersion": "154",
+  "SoundBanks": [
+   {
+    "Id": "393239870",
+    "Type": "User",
+    "GUID": "{1533A11A-F73C-4185-931F-A08FDD914064}",
+    "Language": "SFX",
+    "Hash": "{2102918D-1CA1-507B-848B-488984D4CE25}",
+    "ObjectPath": "\\SoundBanks\\Default Work Unit\\SFX",
+    "ShortName": "SFX",
+    "Path": "SFX.bnk",
+    "Media": [
+     {
+      "Id": "1076511",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX Bounces\\SFX_Woo.wav",
+      "CachePath": "5E/{5EA19AB9-75E7-D9A0-7CCC-8994858D7795}.wem"
+     },
+     {
+      "Id": "268476146",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX Bounces\\SFX_LightClick.wav",
+      "CachePath": "A3/{A39A3684-3A8E-B991-E678-74998892CFD0}.wem"
+     },
+     {
+      "Id": "328532673",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX Bounces\\SFX_Ah.wav",
+      "CachePath": "27/{27AC76F2-034D-F1EB-9764-25371293734B}.wem"
+     },
+     {
+      "Id": "445820046",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX Bounces\\SFX_Boing.wav",
+      "CachePath": "47/{47FB2EC7-B12F-62A7-2ABC-3549A337F34E}.wem"
+     },
+     {
+      "Id": "744753933",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX Bounces\\SFX_HeavyClick.wav",
+      "CachePath": "3E/{3E7A4B51-754F-1857-2292-04D1741F213A}.wem"
+     },
+     {
+      "Id": "889437561",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX Bounces\\SFX_Countdown.wav",
+      "CachePath": "EA/{EA7FAAC0-F813-B9E7-0039-82DC4B0CE6C7}.wem"
+     },
+     {
+      "Id": "995885128",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX Bounces\\SFX_3TicExplosion.wav",
+      "CachePath": "A9/{A9B73D89-30AB-2CEC-90BD-CD42B5F41540}.wem"
+     },
+     {
+      "Id": "1019748959",
+      "Language": "SFX",
+      "Streaming": "false",
+      "Location": "Memory",
+      "ShortName": "SFX Bounces\\SFX_Claque.wav",
+      "CachePath": "9B/{9B9F54A4-EE44-EC16-2283-F97098248826}.wem"
+     }
+    ],
+    "Events": [
+     {
+      "Id": "532397790",
+      "Name": "SFX_ahh",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX_ahh",
+      "GUID": "{A5A4241D-605D-4E83-B411-FE688E42B1F5}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.6817929",
+      "DurationMax": "2.244924",
+      "MediaRefs": [
+       {
+        "Id": "328532673"
+       }
+      ]
+     },
+     {
+      "Id": "2202050608",
+      "Name": "SFX_Boing",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX_Boing",
+      "GUID": "{D0442125-4747-4EF5-AD85-2CA086E74AA0}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.5754211",
+      "DurationMax": "2.3947983",
+      "MediaRefs": [
+       {
+        "Id": "445820046"
+       }
+      ]
+     },
+     {
+      "Id": "2484918906",
+      "Name": "SFX_Countdown",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX_Countdown",
+      "GUID": "{9F14E66E-9A3C-4280-B40C-D4DCEEA65008}",
+      "DurationType": "OneShot",
+      "DurationMin": "8",
+      "DurationMax": "8",
+      "MediaRefs": [
+       {
+        "Id": "889437561"
+       }
+      ]
+     },
+     {
+      "Id": "992806370",
+      "Name": "SFX_Explosion",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX_Explosion",
+      "GUID": "{55E390C2-B353-49D3-A671-1E218ED9410C}",
+      "DurationType": "OneShot",
+      "DurationMin": "4.030151",
+      "DurationMax": "4.030151",
+      "MediaRefs": [
+       {
+        "Id": "995885128"
+       }
+      ]
+     },
+     {
+      "Id": "2178575926",
+      "Name": "SFX_HeavyClick",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX_HeavyClick",
+      "GUID": "{841415F3-A5F0-4706-ABF3-439644723F7A}",
+      "DurationType": "OneShot",
+      "DurationMin": "1",
+      "DurationMax": "1",
+      "MediaRefs": [
+       {
+        "Id": "744753933"
+       }
+      ]
+     },
+     {
+      "Id": "4151166929",
+      "Name": "SFX_LightClick",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX_LightClick",
+      "GUID": "{40E1D0BE-F28B-42C5-836E-B2B8ADE60931}",
+      "DurationType": "OneShot",
+      "DurationMin": "1",
+      "DurationMax": "1",
+      "MediaRefs": [
+       {
+        "Id": "268476146"
+       }
+      ]
+     },
+     {
+      "Id": "682607339",
+      "Name": "SFX_Slap",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX_Slap",
+      "GUID": "{7B01861D-3FFE-4DAE-94DA-07D349876BC5}",
+      "DurationType": "OneShot",
+      "DurationMin": "3.3635857",
+      "DurationMax": "4.5551543",
+      "MediaRefs": [
+       {
+        "Id": "1019748959"
+       }
+      ]
+     },
+     {
+      "Id": "579184922",
+      "Name": "SFX_woo",
+      "ObjectPath": "\\Events\\Default Work Unit\\SFX_woo",
+      "GUID": "{9EB2EC17-D586-4FD4-BC4E-D4558C38D864}",
+      "DurationType": "OneShot",
+      "DurationMin": "1.587401",
+      "DurationMax": "2.413009",
+      "MediaRefs": [
+       {
+        "Id": "1076511"
+       }
+      ]
+     }
+    ]
+   }
+  ],
+  "FileHash": "{CED2EA3D-3B0D-5868-2B56-D68EC9CDCFE1}"
+ }
+}
