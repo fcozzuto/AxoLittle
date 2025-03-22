@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fancy_bouncy_0: 530136739428909635
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

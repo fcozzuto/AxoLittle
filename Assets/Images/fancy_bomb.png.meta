@@ -173,7 +173,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      fancy_bomb_0: 7898840035811839465
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
