@@ -5,11 +5,15 @@ using UnityEngine.InputSystem;
 public class PlayerInputHandler : MonoBehaviour
 {
     PlayerController playerController;
+    PlayerInput playerInput;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-            playerController = GetComponent<PlayerController>();
+        playerInput = GetComponent<PlayerInput>();
+        var players = FindFirstObjectByType<PlayerController>();
+        var index = playerInput.playerIndex;
+        playerController = GetComponent<PlayerController>();
     }
 
     public void OnMove(InputAction.CallbackContext context)

@@ -3,13 +3,20 @@ using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
-    public float playerSpeed = 2.0f;
+    [SerializeField] float playerSpeed = 2.0f;
+    [SerializeField] int playerIndex = 0;
+
     Vector2 move;
 
     // Update is called once per frame
     void Update()
     {
         transform.Translate(move * Time.deltaTime * playerSpeed);
+    }
+
+    public int GetPlayerIndex()
+    {
+        return playerIndex;
     }
 
     public void OnMove(InputAction.CallbackContext context)
