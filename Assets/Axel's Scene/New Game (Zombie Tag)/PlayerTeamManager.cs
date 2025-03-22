@@ -34,4 +34,9 @@ public class PlayerTeamManager : MonoBehaviour
             }
         }
     }
+
+    public void RecheckCivilians()
+    {
+        civilians = FindObjectsOfType<Civilian>(); // Get all GameObjects with Civilian script
+    }
 }

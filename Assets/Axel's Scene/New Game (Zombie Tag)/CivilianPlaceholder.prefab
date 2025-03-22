@@ -80,7 +80,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9095717837082945937, guid: 207ee8102dd4143d288186ef0be518ee, type: 3}
+  m_Sprite: {fileID: 4483049885668819599, guid: e0c57cb1ef5c4a549887357daea7adee, type: 3}
   m_Color: {r: 0.8207547, g: 0.8207547, b: 0.8207547, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -123,6 +123,9 @@ MonoBehaviour:
   playerTeam: {fileID: 0}
   player: {fileID: 0}
   speed: 2
+  ConversionSpeed: 0.01666667
+  ConversionRadius: 1
+  chasingThreshold: 5
 --- !u!70 &8234449856031690242
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
