@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60493ddd0a6554aee8d00d35b2990864, type: 3}
+  m_Name: 4E96B287-63CA-4824-98D5-E40FC931E7C1
+  m_EditorClassIdentifier: 
+  objectName: Battle_and_Win
+  id: 1950213306
+  guid: 4E96B287-63CA-4824-98D5-E40FC931E7C1
