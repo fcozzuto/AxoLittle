@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0613d90f89f140142bd77878ac57177b
+guid: 84341932b93f9644dbfd227d68fa30bd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 530136739428909635
-    second: fancy_bouncy_0
+      213: 8645666646703441286
+    second: 7CB2440D-13AD-4637-90CF-2C96D945E4A3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: fancy_bouncy_0
+      name: 7CB2440D-13AD-4637-90CF-2C96D945E4A3_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 117
-        height: 167
+        width: 3888
+        height: 1080
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 3424b044e8c6b5700800000000000000
-      internalID: 530136739428909635
+      spriteID: 685833b22049bf770800000000000000
+      internalID: 8645666646703441286
       vertices: []
       indices: 
       edges: []
@@ -134,8 +134,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable:
-      fancy_bouncy_0: 530136739428909635
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
