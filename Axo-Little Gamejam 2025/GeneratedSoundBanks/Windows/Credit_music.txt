@@ -1,0 +1,17 @@
+Event	ID	Name			Wwise Object Path	Notes
+	575810265	Credit_Stop			\Default Work Unit\Credit_Stop	
+	1445688307	Credit_Play			\Default Work Unit\Credit_Play	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	72713425	pad	Y:\Documents\WwiseProjects\Axo-Little Gamejam 2025\.cache\58\{58C535EE-FB2D-0A07-6229-D70FA4610C21}.wem		\Interactive Music Hierarchy\Default Work Unit\CreditPlaylist\Credit_music\pad		6912160
+	331023587	Synth arp	Y:\Documents\WwiseProjects\Axo-Little Gamejam 2025\.cache\AB\{AB8A0945-B628-7A99-41FB-AA011A8195BC}.wem		\Interactive Music Hierarchy\Default Work Unit\CreditPlaylist\Credit_music\Synth arp		5760160
+	443636063	Piano_1	Y:\Documents\WwiseProjects\Axo-Little Gamejam 2025\.cache\97\{971AD63E-DE5E-3CF5-A905-E38B088BE826}.wem		\Interactive Music Hierarchy\Default Work Unit\CreditPlaylist\Credit_music\Piano_1		6912160
+	563070260	bass	Y:\Documents\WwiseProjects\Axo-Little Gamejam 2025\.cache\D8\{D84FA621-3F88-0D11-801E-85C71E60C695}.wem		\Interactive Music Hierarchy\Default Work Unit\CreditPlaylist\Credit_music\bass		6912160
+	587263876	Piano	Y:\Documents\WwiseProjects\Axo-Little Gamejam 2025\.cache\2E\{2E67F1FB-3905-13C1-CE9D-4C42816C19FC}.wem		\Interactive Music Hierarchy\Default Work Unit\CreditPlaylist\Credit_music\Piano		6912160
+	647320485	Pluck_1	Y:\Documents\WwiseProjects\Axo-Little Gamejam 2025\.cache\FA\{FAB447E5-3FAA-BCBB-2179-C04332599CF3}.wem		\Interactive Music Hierarchy\Default Work Unit\CreditPlaylist\Credit_music\Pluck_1		6912160
+	670353642	Pluck	Y:\Documents\WwiseProjects\Axo-Little Gamejam 2025\.cache\AC\{ACB97BCF-AFDA-1385-5813-87D4DF24C1F5}.wem		\Interactive Music Hierarchy\Default Work Unit\CreditPlaylist\Credit_music\Pluck		6912160
+	681626540	bass_1	Y:\Documents\WwiseProjects\Axo-Little Gamejam 2025\.cache\F7\{F733B119-A424-DD68-CAA1-602C9ABA1C52}.wem		\Interactive Music Hierarchy\Default Work Unit\CreditPlaylist\Credit_music\bass_1		6912160
+	906498497	drum kit	Y:\Documents\WwiseProjects\Axo-Little Gamejam 2025\.cache\75\{75D4D3B2-00C1-9A70-EB0D-5CA4A1FA131F}.wem		\Interactive Music Hierarchy\Default Work Unit\CreditPlaylist\Credit_music\drum kit		6912160
+	982606202	Inst 12	Y:\Documents\WwiseProjects\Axo-Little Gamejam 2025\.cache\B9\{B9CC883A-C59E-4859-EC95-12AF2B23F2A4}.wem		\Interactive Music Hierarchy\Default Work Unit\CreditPlaylist\Credit_music\Inst 12		6912160
+	1007340146	MainMenu_intro_80bpm_12mes	Y:\Documents\WwiseProjects\Axo-Little Gamejam 2025\.cache\1F\{1F1EF7B9-6E2B-1962-AB47-A800B269A3C9}.wem		\Interactive Music Hierarchy\Default Work Unit\CreditPlaylist\Intro\MainMenu_intro_80bpm_12mes		6912160
+

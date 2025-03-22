@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{7A882077-ADB1-42D7-8016-E21AE6D5B1D9}" SchemaVersion="123">
+	<States>
+		<WorkUnit Name="Default Work Unit" ID="{7A882077-ADB1-42D7-8016-E21AE6D5B1D9}" PersistMode="Standalone">
+			<ChildrenList>
+				<StateGroup Name="Winning" ID="{70F4D5EC-91C9-4BC9-B0BB-7FC2A4343E7C}">
+					<ChildrenList>
+						<State Name="None" ID="{FF548068-E599-4B56-8DFF-D0F7135E3730}"/>
+						<State Name="Win_Axolotl" ID="{1F057F2C-B279-436F-9123-AE036937E52D}"/>
+						<State Name="Win_Robot" ID="{C50CF1DF-D8D6-43C3-A454-C522166233C7}"/>
+					</ChildrenList>
+				</StateGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</States>
+</WwiseDocument>

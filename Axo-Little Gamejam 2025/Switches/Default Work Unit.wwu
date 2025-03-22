@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{4BF30D22-7A3B-4715-8D64-16BCB036ECD0}" SchemaVersion="123">
+	<Switches>
+		<WorkUnit Name="Default Work Unit" ID="{4BF30D22-7A3B-4715-8D64-16BCB036ECD0}" PersistMode="Standalone">
+			<ChildrenList>
+				<SwitchGroup Name="Win_scene" ID="{1AFD150B-AEE7-4791-941C-1DBD7FBDD2D3}">
+					<ChildrenList>
+						<Switch Name="Win_Axolotl" ID="{80C1679C-83E2-4E26-AE47-99DFA7A171FD}"/>
+						<Switch Name="Win_Robot" ID="{1BF0B46E-6D76-4B39-BD8C-43D39044C388}"/>
+					</ChildrenList>
+				</SwitchGroup>
+			</ChildrenList>
+		</WorkUnit>
+	</Switches>
+</WwiseDocument>

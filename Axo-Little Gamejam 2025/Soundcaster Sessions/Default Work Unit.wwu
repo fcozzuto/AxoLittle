@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{FB2E114F-51AF-4393-AB47-7F27EBE2D2D3}" SchemaVersion="123">
+	<SoundcasterSessions>
+		<WorkUnit Name="Default Work Unit" ID="{FB2E114F-51AF-4393-AB47-7F27EBE2D2D3}" PersistMode="Standalone">
+			<ChildrenList>
+				<SoundcasterSession Name="Music" ID="{BD3E0C1A-6644-45EE-B74C-71F5795C3536}">
+					<ModuleList>
+						<Module>
+							<ObjectRef Name="Win_Robot_Play" ID="{A0987870-4686-4F8C-8664-FB280AE7004F}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}"/>
+							<Position X="0" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Win_Axolotl_Play" ID="{892FA27C-1013-45BF-B893-C30E639DF2AB}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}"/>
+							<Position X="0" Y="1"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Win_Stop" ID="{867A7E7E-1FF7-45BA-B812-7D0DC305871E}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}"/>
+							<Position X="0" Y="2"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Battle_Play" ID="{081F19A2-40BC-4108-A838-092F21BFA6D1}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}"/>
+							<Position X="1" Y="0"/>
+						</Module>
+						<Module>
+							<ObjectRef Name="Battle_Stop" ID="{59309972-18E8-4697-A094-1AD97C7C9366}" WorkUnitID="{75CE7DA5-1766-420A-990B-B0871B065E0C}"/>
+							<Position X="1" Y="1"/>
+						</Module>
+					</ModuleList>
+					<RTPCValueList ShowAll="true"/>
+					<CurrentStateList ShowAll="true">
+						<CurrentStateRef Name="Win_Axolotl" ID="{1F057F2C-B279-436F-9123-AE036937E52D}"/>
+					</CurrentStateList>
+					<CurrentSwitchList ShowAll="true">
+						<CurrentSwitchRef Name="Win_Axolotl" ID="{80C1679C-83E2-4E26-AE47-99DFA7A171FD}"/>
+					</CurrentSwitchList>
+				</SoundcasterSession>
+			</ChildrenList>
+		</WorkUnit>
+	</SoundcasterSessions>
+</WwiseDocument>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WwiseDocument Type="WorkUnit" ID="{75CE7DA5-1766-420A-990B-B0871B065E0C}" SchemaVersion="123">
+	<Events>
+		<WorkUnit Name="Default Work Unit" ID="{75CE7DA5-1766-420A-990B-B0871B065E0C}" PersistMode="Standalone">
+			<ChildrenList>
+				<Event Name="Credit_Play" ID="{64676167-A1A5-4D7E-9ACC-76AAD465F1B8}">
+					<ChildrenList>
+						<Action Name="" ID="{AF86137F-D8B0-406D-9460-74235D6A0A12}" ShortID="1053325496">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="CreditPlaylist" ID="{4D5C989C-F3AC-4585-AEA6-F5F8D190E5FA}" WorkUnitID="{894AA836-874F-4C37-9D3B-1D56ED5926B9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Credit_Stop" ID="{91A812B4-4107-47CF-AE74-96699FBB222D}">
+					<ChildrenList>
+						<Action Name="" ID="{8A788275-CB15-4785-84FF-84096D632082}" ShortID="1032694466">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="3"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Battle_Play" ID="{081F19A2-40BC-4108-A838-092F21BFA6D1}">
+					<ChildrenList>
+						<Action Name="" ID="{6A7EA0FA-1677-4676-A7A8-D98A50AAF68F}" ShortID="528050884">
+							<PropertyList>
+								<Property Name="FadeInCurve" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="0.5"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Gameplay" ID="{7FC6C91C-81DA-419E-ADDB-59C3FDCC4D36}" WorkUnitID="{894AA836-874F-4C37-9D3B-1D56ED5926B9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Battle_Stop" ID="{59309972-18E8-4697-A094-1AD97C7C9366}">
+					<ChildrenList>
+						<Action Name="" ID="{4A24EAB6-82C6-4B78-BD56-BAE8742F4048}" ShortID="186857016">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="ApplyToDynamicSequence" Type="bool" Value="False"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="1"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Win_Axolotl_Play" ID="{892FA27C-1013-45BF-B893-C30E639DF2AB}">
+					<ChildrenList>
+						<Action Name="" ID="{50CFC886-A2CC-4A22-978C-006EFB0AE66A}" ShortID="846371864">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Win_Axolotl" ID="{1F057F2C-B279-436F-9123-AE036937E52D}" WorkUnitID="{7A882077-ADB1-42D7-8016-E21AE6D5B1D9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{A8F2696B-292C-4B24-992F-203E4C06D31D}" ShortID="7398286">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Win_Axolotl" ID="{80C1679C-83E2-4E26-AE47-99DFA7A171FD}" WorkUnitID="{4BF30D22-7A3B-4715-8D64-16BCB036ECD0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{9D44FD84-F233-402C-B4C3-1AA600D9FCC6}" ShortID="586332777">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Win" ID="{C2523520-FD46-4605-9BAA-A0CCF3940835}" WorkUnitID="{894AA836-874F-4C37-9D3B-1D56ED5926B9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Win_Stop" ID="{867A7E7E-1FF7-45BA-B812-7D0DC305871E}">
+					<ChildrenList>
+						<Action Name="" ID="{59DF55E8-A59C-44C8-8B00-1F7F99766BC2}" ShortID="450329732">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="3"/>
+								<Property Name="FadeOutCurve" Type="int16" Value="1"/>
+								<Property Name="FadeTime" Type="Real64" Value="2"/>
+							</PropertyList>
+							<ReferenceList/>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="Win_Robot_Play" ID="{A0987870-4686-4F8C-8664-FB280AE7004F}">
+					<ChildrenList>
+						<Action Name="" ID="{7B59846D-1F05-423F-B7B3-113833745AD9}" ShortID="1011678883">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="22"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Win_Robot" ID="{C50CF1DF-D8D6-43C3-A454-C522166233C7}" WorkUnitID="{7A882077-ADB1-42D7-8016-E21AE6D5B1D9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{C51A9A45-493E-4577-A448-29490CDCD7D0}" ShortID="289884596">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="23"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Win_Robot" ID="{1BF0B46E-6D76-4B39-BD8C-43D39044C388}" WorkUnitID="{4BF30D22-7A3B-4715-8D64-16BCB036ECD0}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{D1A19649-BE03-4A8C-80E2-D2313DADA1B2}" ShortID="886549679">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Win" ID="{C2523520-FD46-4605-9BAA-A0CCF3940835}" WorkUnitID="{894AA836-874F-4C37-9D3B-1D56ED5926B9}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+			</ChildrenList>
+		</WorkUnit>
+	</Events>
+</WwiseDocument>
