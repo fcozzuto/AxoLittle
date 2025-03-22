@@ -29,6 +29,7 @@ public class PlayerTeamManager : MonoBehaviour
             if (distance < ConversionRadius)
             {
                 Debug.Log("Civilian in range of conversion");
+                civilian.Convert(ConversionSpeed, Team);
             }
         }
     }
