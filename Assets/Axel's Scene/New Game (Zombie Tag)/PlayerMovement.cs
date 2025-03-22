@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
         float moveY = Input.GetAxisRaw("Vertical");   // W/S or Up/Down Arrow
 
         moveInput = new Vector2(moveX, moveY).normalized; // Normalize to prevent diagonal speed boost
+        if(moveX != 0 || moveY != 0)
+            transform.rotation = Quaternion.Euler(0, 0, Mathf.Sin(50 * Time.time));
 
         if (moveX == 1)
             FollowPoint.transform.position = FollowPointL.transform.position;
