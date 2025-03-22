@@ -6,10 +6,12 @@ public class Grabable : MonoBehaviour
     private GameObject HandReference;
     private Hand HandScript;
     public Boolean isGrabbed = false;
+    public Rigidbody2D rb;
 
     void Start()
     {
         HandReference = GameObject.FindGameObjectWithTag("Hand");
+        rb = this.GetComponent<Rigidbody2D>();
 
         if (HandReference != null)
         {
@@ -28,6 +30,7 @@ public class Grabable : MonoBehaviour
             // The hand is empty and can grab the object
             Debug.Log("Object grabbed!");
             isGrabbed = true;
+            rb.constraints = RigidbodyConstraints2D.FreezePositionY;
             HandScript.SetObjectInHand(this);
         }
         else
@@ -44,7 +47,6 @@ public class Grabable : MonoBehaviour
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector2 direction = (mousePosition - (Vector2)this.transform.position).normalized;
 
-        Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
         rb.constraints = RigidbodyConstraints2D.None;
 
         if (rb != null)
