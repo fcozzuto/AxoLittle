@@ -18,6 +18,10 @@ public class CivilianAI : MonoBehaviour
     public float ConversionRadius = 1f;
 
     public float chasingThreshold = 5f;
+
+    public float explosionRadius = 10f;
+
+    public string Category; // Can hold different values: "Normal", "Bomber", "Curling"
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -77,7 +81,18 @@ public class CivilianAI : MonoBehaviour
 
         if (distance < ConversionRadius)
         {
-            civilian.Convert(ConversionSpeed, RefToCivilian.Team);
+            if (Category == "Normal")
+            {
+                civilian.Convert(ConversionSpeed, RefToCivilian.Team);
+            }
+            else if (Category == "Bomber")
+            {
+                Explode();
+            }
+            else if (Category == "Curling")
+            {
+                Curling();
+            }
         }
     }
 
@@ -88,5 +103,28 @@ public class CivilianAI : MonoBehaviour
 
         Vector2 direction = new Vector2(x, y).normalized; // Normalize so speed stays consistent
         transform.Translate(direction * speed * Time.deltaTime);
+    }
+
+    private void Explode()
+    {
+        foreach (var civilian in playerTeam.civilians)
+        {
+            distance = Vector2.Distance(transform.position, civilian.gameObject.transform.position);
+            if (distance < explosionRadius && civilian.Team != RefToCivilian.Team)
+            {
+                civilian.Convert(99999999f, RefToCivilian.Team);
+                SpriteRenderer spriteRenderer = civilian.GetComponent<SpriteRenderer>();
+                if (spriteRenderer != null)
+                {
+                    spriteRenderer.sprite = civilian.RegularSprite;  // Assuming "newSprite" is a field in Civilian
+                    Category = "Normal";
+                }
+            }
+        }
+    }
+
+    private void Curling()
+    {
+        //
     }
 }

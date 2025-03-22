@@ -11,6 +11,8 @@ public class Civilian : MonoBehaviour
     private CivilianAI civilianAI;
     private PlayerTeamManager[] playerTeamManagers;
 
+    public Sprite RegularSprite;  // Assign this in the Inspector or via code
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
