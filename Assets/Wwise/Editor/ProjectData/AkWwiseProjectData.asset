@@ -373,7 +373,7 @@ MonoBehaviour:
     ParentPath: Events/Default Work Unit
     guid: a57dce7566170a42990bb0871b065e0c
     GuidInternal: 
-    m_lastTime: -8584589316656861318
+    m_lastTime: -8584589309974424568
     List:
     - name: Battle_Play
       guid: a2191f08bc400841a838092f21bfa6d1
@@ -390,8 +390,8 @@ MonoBehaviour:
         guid: a2191f08bc400841a838092f21bfa6d1
       Path: Events/Default Work Unit/Battle_Play
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Battle_Stop
       guid: 72993059e8189746a0941ad97c7c9366
       id: 611866442
@@ -407,8 +407,8 @@ MonoBehaviour:
         guid: 72993059e8189746a0941ad97c7c9366
       Path: Events/Default Work Unit/Battle_Stop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Credit_Play
       guid: 67616764a5a17e4d9acc76aad465f1b8
       id: 1445688307
@@ -424,8 +424,8 @@ MonoBehaviour:
         guid: 67616764a5a17e4d9acc76aad465f1b8
       Path: Events/Default Work Unit/Credit_Play
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Credit_Stop
       guid: b412a8910741cf47ae7496699fbb222d
       id: 575810265
@@ -441,8 +441,8 @@ MonoBehaviour:
         guid: b412a8910741cf47ae7496699fbb222d
       Path: Events/Default Work Unit/Credit_Stop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Win_Axolotl_Play
       guid: 7ca22f891310bf45b893c30e639df2ab
       id: 55536622
@@ -458,8 +458,8 @@ MonoBehaviour:
         guid: 7ca22f891310bf45b893c30e639df2ab
       Path: Events/Default Work Unit/Win_Axolotl_Play
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Win_Robot_Play
       guid: 707898a086468c4f8664fb280ae7004f
       id: 1339265993
@@ -475,8 +475,8 @@ MonoBehaviour:
         guid: 707898a086468c4f8664fb280ae7004f
       Path: Events/Default Work Unit/Win_Robot_Play
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
     - name: Win_Stop
       guid: 7e7e7a86f71fba45b8127d0dc305871e
       id: 16679072
@@ -492,8 +492,8 @@ MonoBehaviour:
         guid: 7e7e7a86f71fba45b8127d0dc305871e
       Path: Events/Default Work Unit/Win_Stop
       maxAttenuation: 0
-      maxDuration: -1
-      minDuration: -1
+      maxDuration: 0
+      minDuration: 0
   RtpcWwu:
   - PhysicalPath: Game Parameters/Default Work Unit.wwu
     PathAndIcons:
