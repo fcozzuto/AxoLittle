@@ -1,9 +1,11 @@
+using System;
 using UnityEngine;
 
 public class Grabable : MonoBehaviour
 {
     private GameObject HandReference;
     private Hand HandScript;
+    public Boolean isGrabbed = false;
 
     void Start()
     {
@@ -25,6 +27,7 @@ public class Grabable : MonoBehaviour
         {
             // The hand is empty and can grab the object
             Debug.Log("Object grabbed!");
+            isGrabbed = true;
             HandScript.SetObjectInHand(this);
         }
         else
@@ -36,6 +39,18 @@ public class Grabable : MonoBehaviour
     public void Interact()
     {
         Debug.Log("Interacting");
+        this.transform.SetParent(null);
+
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 direction = (mousePosition - (Vector2)this.transform.position).normalized;
+
+        Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
+        rb.constraints = RigidbodyConstraints2D.None;
+
+        if (rb != null)
+        {
+            rb.AddForce(direction * 10f, ForceMode2D.Impulse);
+        }
     }
 }
 

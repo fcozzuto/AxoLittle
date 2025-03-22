@@ -71,6 +71,11 @@ public class Hand : MonoBehaviour
     public void SetObjectInHand(Grabable grabable)
     {
         this.ObjectHeld = grabable.gameObject;
-    }
 
+        // Set the object's parent to this hand
+        this.ObjectHeld.transform.SetParent(this.transform);
+
+        // Set the object's position to match the hand's position
+        this.ObjectHeld.transform.position = this.transform.position;
+    }
 }
