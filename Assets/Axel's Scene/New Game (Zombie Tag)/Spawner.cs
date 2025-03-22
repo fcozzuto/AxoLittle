@@ -3,6 +3,8 @@ using UnityEngine;
 public class Spawner : MonoBehaviour
 {
     public GameObject prefabToSpawn;  // Assign the prefab in the Inspector
+    public GameObject BomberPrefab;  // Assign the prefab in the Inspector
+    public GameObject CurlingPrefab;  // Assign the prefab in the Inspector
     public float spawnInterval = 2f;  // Time between spawns
     public Vector2 minBounds = new Vector2(-5f, -5f);  // Bottom-left corner
     public Vector2 maxBounds = new Vector2(5f, 5f);    // Top-right corner

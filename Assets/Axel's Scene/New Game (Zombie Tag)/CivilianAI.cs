@@ -1,6 +1,9 @@
 using System;
+using System.Collections;
+using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class CivilianAI : MonoBehaviour
 {
@@ -20,6 +23,8 @@ public class CivilianAI : MonoBehaviour
     public float chasingThreshold = 5f;
 
     public float explosionRadius = 10f;
+
+    private bool isCurling = false; // To ensure we don't trigger multiple movements at once
 
     public string Category; // Can hold different values: "Normal", "Bomber", "Curling"
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -91,7 +96,7 @@ public class CivilianAI : MonoBehaviour
             }
             else if (Category == "Curling")
             {
-                Curling();
+                Curling(civilianPos);
             }
         }
     }
@@ -113,18 +118,85 @@ public class CivilianAI : MonoBehaviour
             if (distance < explosionRadius && civilian.Team != RefToCivilian.Team)
             {
                 civilian.Convert(99999999f, RefToCivilian.Team);
-                SpriteRenderer spriteRenderer = civilian.GetComponent<SpriteRenderer>();
+                SpriteRenderer spriteRenderer = RefToCivilian.GetComponent<SpriteRenderer>();
                 if (spriteRenderer != null)
                 {
-                    spriteRenderer.sprite = civilian.RegularSprite;  // Assuming "newSprite" is a field in Civilian
+                    spriteRenderer.sprite = RefToCivilian.RegularSprite;  // Assuming "newSprite" is a field in Civilian
                     Category = "Normal";
                 }
             }
         }
     }
 
-    private void Curling()
+    private void Curling(GameObject target)
     {
-        //
+        if (isCurling) return; // Prevent starting the movement if already in progress
+
+        isCurling = true;  // Start the curling movement
+        StartCoroutine(MoveAndConvert(target));
+    }
+
+    private IEnumerator MoveAndConvert(GameObject target)
+    {
+        // Find the direction vector between this object and the target
+        Vector2 direction = (target.transform.position - transform.position).normalized;
+
+        float forceAmount = 1f; // You can adjust this value to control the force applied
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+        if (rb != null)
+        {
+            // Continuously apply force in the direction of the target
+            while (!IsCollidingWithWall())
+            {
+                rb.AddForce(direction * forceAmount, ForceMode2D.Impulse);
+
+                // Check for any collisions during movement
+                yield return null; // Wait until the next frame to continue movement
+            }
+
+            // Once a wall is hit, stop the movement and handle logic
+            Debug.Log("Hit a wall or other object");
+
+            // Optional: Change sprite or perform any other necessary actions
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            if (spriteRenderer != null)
+            {
+                spriteRenderer.sprite = RefToCivilian.RegularSprite;  // Update to the desired sprite
+            }
+            Category = "Normal";
+        }
+        else
+        {
+            Debug.LogError("Rigidbody2D is missing on this object.");
+        }
+
+        isCurling = false;  // Movement has ended
+    }
+
+    private bool IsCollidingWithWall()
+    {
+        // Use a raycast to check if the object is colliding with something (e.g., a wall)
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, 0.5f); // Change direction as needed
+
+        // If the raycast hits an object tagged "Wall", we stop the movement
+        if (hit.collider != null && hit.collider.CompareTag("Wall"))
+        {
+            return true;
+        }
+
+        // If we hit an enemy, convert the enemy (if it's in the player's team)
+        if (hit.collider != null && hit.collider.CompareTag("Civilian"))
+        {
+            Civilian enemy = hit.collider.GetComponent<Civilian>();
+            if (enemy != null && enemy.Team != RefToCivilian.Team)
+            {
+                // Convert enemy and apply necessary logic
+                enemy.Convert(99999999f, RefToCivilian.Team);
+                Debug.Log("Enemy converted!");
+            }
+        }
+
+        return false;
     }
 }
