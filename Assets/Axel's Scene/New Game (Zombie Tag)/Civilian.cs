@@ -6,10 +6,14 @@ public class Civilian : MonoBehaviour
     public float ConversionRateTowardsBU = 0f;
     public float ConversionRateTowardsUDS = 0f;
     public float Loyalty = 0.1f;
+
+    private SpriteRenderer spriteRenderer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         Team = null;
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -80,13 +84,14 @@ public class Civilian : MonoBehaviour
         if (ConversionRateTowardsBU > 1f)
         {
             Team = "BU";
+            spriteRenderer.color = new Color(0.345f, 0.173f, 0.514f); // RGB(88, 44, 131)
             Debug.Log("Switched to the BU Team");
         }
 
         else if (ConversionRateTowardsUDS > 1f)
         {
             Team = "UDS";
-            ConversionRateTowardsBU = 0;
+            spriteRenderer.color = new Color(0.282f, 0.416f, 0.361f); // RGB(72, 106, 92)
             Debug.Log("Switched to the UDS Team");
         }
     }
