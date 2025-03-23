@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour
     private IEnumerator StartGame()
     {
         AudioSource.PlayOneShot(HeavyClick);
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(0.5f);
         SceneManager.LoadScene("AxelScene");
     }
 

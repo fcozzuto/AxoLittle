@@ -24,6 +24,8 @@ public class GameTimer : MonoBehaviour
 
     public SoundManager soundManager;
 
+    public bool isClignot = false;
+
     void Start()
     {
         currentTime = endTime;
@@ -41,6 +43,12 @@ public class GameTimer : MonoBehaviour
             int num = Mathf.CeilToInt(currentTime); // Round up the seconds
             timer.text = num.ToString();
 
+            if(currentTime < 10f && !isClignot)
+            {
+                isClignot = true;
+                StartCoroutine(Cling());
+            }
+
             if (currentTime <= 0)
             {
                 // Timer reaches zero, mark game as over
@@ -48,6 +56,18 @@ public class GameTimer : MonoBehaviour
                 StopCoroutine(StopAfterTimer()); // Ensure it's stopped immediately if the timer ends before the delay
                 CalculateTeamScore(); // Make sure score is calculated when timer ends
             }
+        }
+    }
+
+    private IEnumerator Cling()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+            if (timer.color != Color.white)
+                timer.color = Color.white;
+            else
+                timer.color = Color.red;
         }
     }
 

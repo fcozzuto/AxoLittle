@@ -1,5 +1,7 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EndGameManager : MonoBehaviour
 {
@@ -26,7 +28,16 @@ public class EndGameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isGameOver) return; // Prevent unnecessary updates once the game is over
+        if (isGameOver)
+        {
+            // If Escape is pressed, load the "BasicMenu" scene
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                SceneManager.LoadScene("BasicMenu");
+            }
+            return; // Prevent unnecessary updates once the game is over
+        }
+
 
         bool areAllBUDead = true;
         bool areAllUDSDead = true;
