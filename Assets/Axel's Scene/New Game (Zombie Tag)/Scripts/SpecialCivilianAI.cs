@@ -15,8 +15,8 @@ public class SpecialCivilianAI : MonoBehaviour
     private float distance;
     public float speed = 3f;
 
-    public float damage;
-    public float DamageRadius;
+    public int damage;
+    public int DamageRadius;
 
     void Start()
     {

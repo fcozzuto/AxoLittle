@@ -187,4 +187,4 @@ MonoBehaviour:
   civilians: []
   speed: 3
   damage: 1
-  DamageRadius: 2
+  DamageRadius: 1

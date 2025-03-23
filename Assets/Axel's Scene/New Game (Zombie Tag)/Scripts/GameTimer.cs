@@ -22,11 +22,14 @@ public class GameTimer : MonoBehaviour
     public bool gameOver = false;
     public bool hasSpawned = false;
 
+    public SoundManager soundManager;
+
     void Start()
     {
         currentTime = endTime;
         timer.text = currentTime.ToString();
         StartCoroutine(StopAfterTimer());
+        soundManager = FindAnyObjectByType<SoundManager>();
     }
 
     void Update()
@@ -96,6 +99,11 @@ public class GameTimer : MonoBehaviour
             {
                 Instantiate(Team2Prefab, posRight.transform.position, Quaternion.identity);
             }
+
+            if (team1Amount > team2Amount)
+                soundManager.TriggerWin("Axolotl");
+            else
+                soundManager.TriggerWin("Frog");
         }
     }
 }

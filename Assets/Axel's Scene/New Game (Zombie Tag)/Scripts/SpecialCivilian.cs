@@ -3,8 +3,8 @@ using UnityEngine;
 public class SpecialCivilian : MonoBehaviour
 {
     public string Team;
-    public float currentHp;
-    public float MaxHp;
+    public int currentHp;
+    public int MaxHp;
 
     private SpriteRenderer spriteRenderer;
     private SpecialCivilianAI specialcivilianAI;
@@ -16,7 +16,7 @@ public class SpecialCivilian : MonoBehaviour
         specialcivilianAI = GetComponent<SpecialCivilianAI>();
     }
 
-    public void Attack(float damage)
+    public void Attack(int damage)
     {
         currentHp -= damage;
     }

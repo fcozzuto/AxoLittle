@@ -1,21 +1,22 @@
+
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 public class PlayerInputHandler : MonoBehaviour
 {
-    PlayerMovement playerMovement;
+    PlayerController playerController;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
     {
-        playerMovement = GetComponent<PlayerMovement>();
+            playerController = GetComponent<PlayerController>();
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        if (playerMovement != null)
+        if (playerController != null)
         {
-            playerMovement.OnMove(context);
+            playerController.OnMove(context);
         }
         else
         {

@@ -15,14 +15,14 @@ public class Spawner : MonoBehaviour
     public Vector2 maxBounds = new Vector2(5f, 5f);    // Top-right corner
 
     public PlayerTeamManager[] playerTeamManagers;
-    public PlayerMovementAI[] playerTeamManagersAI;
+    public PlayerMovementAI[] playerMovementAI;
     public GameTimer timer;
 
     void Start()
     {
         InvokeRepeating(nameof(SpawnPrefab), 0f, spawnInterval);
         playerTeamManagers = FindObjectsOfType<PlayerTeamManager>();
-        playerTeamManagersAI = FindObjectsOfType<PlayerMovementAI>();
+        playerMovementAI = FindObjectsOfType<PlayerMovementAI>();
         timer = FindAnyObjectByType<GameTimer>();
     }
 
@@ -52,9 +52,9 @@ public class Spawner : MonoBehaviour
             {
                 playerTeamManager.RecheckCivilians();
             }
-            foreach (var playerTeamManager in playerTeamManagersAI)
+            foreach (var playerMovementAI in playerMovementAI)
             {
-                playerTeamManager.RecheckCivilians();
+                playerMovementAI.RecheckCivilians();
             }
         }
     }

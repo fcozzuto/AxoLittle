@@ -85,4 +85,3 @@ public class PlayerMovementAI : MonoBehaviour
         civilians = FindObjectsOfType<Civilian>(); // Get all GameObjects with Civilian script
     }
 }
-
