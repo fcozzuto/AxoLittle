@@ -32,6 +32,8 @@ public class CivilianAI : MonoBehaviour
 
     public float chanceToAh = 0.001f;
 
+    public GameTimer timer;
+
     public string Category; // Can hold different values: "Normal", "Bomber", "Curling"
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -39,11 +41,21 @@ public class CivilianAI : MonoBehaviour
         RefToCivilian = GetComponent<Civilian>();
         noiseOffsetX = UnityEngine.Random.Range(0f, 100f);
         noiseOffsetY = UnityEngine.Random.Range(0f, 100f);
+
+        timer = FindAnyObjectByType<GameTimer>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (timer != null)
+        {
+            if (timer.gameOver)
+            {
+                this.gameObject.SetActive(false);
+            }
+        }
+
         float randomValue = UnityEngine.Random.Range(0f, 1f);
         if (randomValue < chanceToAh)
             AudioSource.PlayClipAtPoint(ahSound, transform.position);
