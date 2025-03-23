@@ -27,8 +27,6 @@ public class SpecialCivilianAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(RefToCivilian.currentHp < 0)
-            this.gameObject.SetActive(false);
         civilians = FindObjectsOfType<SpecialCivilian>();
         // in like the update, when the chars are moving
         transform.rotation = Quaternion.Euler(0, 0, Mathf.Sin(50 * Time.time));

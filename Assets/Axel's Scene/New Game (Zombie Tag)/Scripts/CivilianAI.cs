@@ -29,8 +29,10 @@ public class CivilianAI : MonoBehaviour
     private bool hasExploded = false;
     public AudioClip explosionSound;
     public AudioClip ahSound;
+    public AudioClip wooSound;
 
     public float chanceToAh = 0.001f;
+    public float chanceToWoo = 0.001f;
 
     public GameTimer timer;
 
@@ -59,6 +61,8 @@ public class CivilianAI : MonoBehaviour
         float randomValue = UnityEngine.Random.Range(0f, 1f);
         if (randomValue < chanceToAh)
             AudioSource.PlayClipAtPoint(ahSound, transform.position);
+        else if (randomValue < chanceToWoo + chanceToAh)
+            AudioSource.PlayClipAtPoint(wooSound, transform.position);
 
         // in like the update, when the chars are moving
         transform.rotation = Quaternion.Euler(0, 0, Mathf.Sin(50 * Time.time));

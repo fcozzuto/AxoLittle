@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6171638465931915112}
   - component: {fileID: 2558639476601099903}
   - component: {fileID: 5969878719028611404}
+  - component: {fileID: 5568779228134243951}
   m_Layer: 8
   m_Name: CurlingMan
   m_TagString: Civilian
@@ -108,6 +109,9 @@ MonoBehaviour:
   ConversionRateTowardsUDS: 0
   Loyalty: 0.1
   RegularSprite: {fileID: 4483049885668819599, guid: e0c57cb1ef5c4a549887357daea7adee, type: 3}
+  timer: {fileID: 0}
+  audioSource: {fileID: 5568779228134243951}
+  ConversionSound: {fileID: 8300000, guid: 96822e3a1e26ab14ebd5fb864360f43f, type: 3}
 --- !u!114 &6171638465931915112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -129,8 +133,11 @@ MonoBehaviour:
   chasingThreshold: 5
   explosionRadius: 10
   explosionSound: {fileID: 8300000, guid: 18d122bb392f44146ace4c928b526f69, type: 3}
-  ahSound: {fileID: 8300000, guid: c17d05573427a2b46acd4a98528dbe5d, type: 3}
+  ahSound: {fileID: 8300000, guid: 3f510db296728ab478dcce30b6e08523, type: 3}
+  wooSound: {fileID: 8300000, guid: e96e5d83822eba44b93e2fc731fefe9f, type: 3}
   chanceToAh: 0.0001
+  chanceToWoo: 0.001
+  timer: {fileID: 0}
   Category: Curling
 --- !u!70 &2558639476601099903
 CapsuleCollider2D:
@@ -196,3 +203,100 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!82 &5568779228134243951
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8267188870969604923}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4

@@ -101,9 +101,9 @@ public class GameTimer : MonoBehaviour
             }
 
             if (team1Amount > team2Amount)
-                soundManager.TriggerWin("Axolotl");
-            else
                 soundManager.TriggerWin("Frog");
+            else
+                soundManager.TriggerWin("Axolotl");
         }
     }
 }

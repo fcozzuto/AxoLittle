@@ -15,6 +15,9 @@ public class Civilian : MonoBehaviour
 
     public GameTimer timer;
 
+    public AudioSource audioSource;
+    public AudioClip ConversionSound;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -100,6 +103,7 @@ public class Civilian : MonoBehaviour
             Team = "BU";
             spriteRenderer.color = new Color(0.345f, 0.173f, 0.514f); // RGB(88, 44, 131)
             Debug.Log("Switched to the BU Team");
+            AudioSource.PlayClipAtPoint(ConversionSound, transform.position);
         }
 
         else if (ConversionRateTowardsUDS > 1f)
@@ -107,9 +111,9 @@ public class Civilian : MonoBehaviour
             Team = "UDS";
             spriteRenderer.color = new Color(0.282f, 0.416f, 0.361f); // RGB(72, 106, 92)
             Debug.Log("Switched to the UDS Team");
+            AudioSource.PlayClipAtPoint(ConversionSound, transform.position);
         }
 
-        // Debugging: Print the names of all found civilians
         foreach (var player in playerTeamManagers)
         {
             if(player.Team == Team)
