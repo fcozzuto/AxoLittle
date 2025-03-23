@@ -4,24 +4,26 @@ using UnityEngine.InputSystem;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] float playerSpeed = 2.0f;
-    [SerializeField] int playerIndex = 0;
 
-    Vector2 move;
+    Vector2 moveInput;
+    Rigidbody2D rb;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        transform.Translate(move * Time.deltaTime * playerSpeed);
+        rb = GetComponent<Rigidbody2D>();
     }
 
-    public int GetPlayerIndex()
+    // Update is called once per frame
+    void FixedUpdate()
     {
-        return playerIndex;
+        Vector2 move = new Vector2(moveInput.x, moveInput.y) * playerSpeed;
+
+        rb.linearVelocity = new Vector2(move.x, move.y);
     }
 
     public void OnMove(InputAction.CallbackContext context)
     {
-        move = context.ReadValue<Vector2>();
-        Debug.Log("Move Input: " + move);
+        moveInput = context.ReadValue<Vector2>();
+        Debug.Log("Move Input: " + moveInput);
     }
 }

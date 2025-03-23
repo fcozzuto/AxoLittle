@@ -1,16 +1,31 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class CustomPlayerSpawner : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    public GameObject playerPrefab1;
+    public GameObject playerPrefab2;
+
+    private PlayerInputManager playerInputManager;
+    private int playerIndex = 0;
+
+    private void Awake()
     {
-        
+
+        playerInputManager = GetComponent<PlayerInputManager>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void OnPlayerJoined(PlayerInput playerInput)
     {
+        playerIndex++;
+        if (playerIndex == 0)
+        {
+            playerInputManager.playerPrefab = playerPrefab1;
+        } 
         
+        if (playerIndex == 1)
+        {
+            playerInputManager.playerPrefab = playerPrefab2;
+        }
     }
 }
