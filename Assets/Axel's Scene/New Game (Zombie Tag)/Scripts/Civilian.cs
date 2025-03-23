@@ -13,6 +13,8 @@ public class Civilian : MonoBehaviour
 
     public Sprite RegularSprite;  // Assign this in the Inspector or via code
 
+    public GameTimer timer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,12 +22,18 @@ public class Civilian : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
         civilianAI = GetComponent<CivilianAI>();
         playerTeamManagers = FindObjectsOfType<PlayerTeamManager>();
+        timer = FindAnyObjectByType<GameTimer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (timer != null)
+        {
+            if (timer.gameOver)
+            {
+                this.gameObject.SetActive(false);
+            }
+        }
     }
 
     public void Convert(float ConversionSpeed, string TeamOfConversion)

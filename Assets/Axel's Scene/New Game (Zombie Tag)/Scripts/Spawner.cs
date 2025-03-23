@@ -15,36 +15,41 @@ public class Spawner : MonoBehaviour
     public Vector2 maxBounds = new Vector2(5f, 5f);    // Top-right corner
 
     public PlayerTeamManager[] playerTeamManagers;
+    public GameTimer timer;
 
     void Start()
     {
         InvokeRepeating(nameof(SpawnPrefab), 0f, spawnInterval);
         playerTeamManagers = FindObjectsOfType<PlayerTeamManager>();
+        timer = FindAnyObjectByType<GameTimer>();
     }
 
     private void SpawnPrefab()
     {
-        if (prefabToSpawn == null) return; // Prevent errors if no prefab is assigned
-
-        Vector2 randomPosition = new Vector2(
-            Random.Range(minBounds.x, maxBounds.x),
-            Random.Range(minBounds.y, maxBounds.y)
-        );
-
-        float randomValue = Random.Range(0f, 1f);
-        if(randomValue > RegularProportion)
+        if (!timer.gameOver)
         {
-            if(randomValue < RegularProportion + BomberProportion)
-                Instantiate(BomberPrefab, randomPosition, Quaternion.identity);
+            if (prefabToSpawn == null) return; // Prevent errors if no prefab is assigned
+
+            Vector2 randomPosition = new Vector2(
+                Random.Range(minBounds.x, maxBounds.x),
+                Random.Range(minBounds.y, maxBounds.y)
+            );
+
+            float randomValue = Random.Range(0f, 1f);
+            if (randomValue > RegularProportion)
+            {
+                if (randomValue < RegularProportion + BomberProportion)
+                    Instantiate(BomberPrefab, randomPosition, Quaternion.identity);
+                else
+                    Instantiate(CurlingPrefab, randomPosition, Quaternion.identity);
+            }
             else
-                Instantiate(CurlingPrefab, randomPosition, Quaternion.identity);
-        }
-        else
-            Instantiate(prefabToSpawn, randomPosition, Quaternion.identity);
+                Instantiate(prefabToSpawn, randomPosition, Quaternion.identity);
 
-        foreach (var playerTeamManager in playerTeamManagers)
-        {
-            playerTeamManager.RecheckCivilians();
+            foreach (var playerTeamManager in playerTeamManagers)
+            {
+                playerTeamManager.RecheckCivilians();
+            }
         }
     }
 }
