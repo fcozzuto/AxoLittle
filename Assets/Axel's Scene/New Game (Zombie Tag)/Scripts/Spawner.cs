@@ -15,12 +15,14 @@ public class Spawner : MonoBehaviour
     public Vector2 maxBounds = new Vector2(5f, 5f);    // Top-right corner
 
     public PlayerTeamManager[] playerTeamManagers;
+    public PlayerMovementAI[] playerTeamManagersAI;
     public GameTimer timer;
 
     void Start()
     {
         InvokeRepeating(nameof(SpawnPrefab), 0f, spawnInterval);
         playerTeamManagers = FindObjectsOfType<PlayerTeamManager>();
+        playerTeamManagersAI = FindObjectsOfType<PlayerMovementAI>();
         timer = FindAnyObjectByType<GameTimer>();
     }
 
@@ -47,6 +49,10 @@ public class Spawner : MonoBehaviour
                 Instantiate(prefabToSpawn, randomPosition, Quaternion.identity);
 
             foreach (var playerTeamManager in playerTeamManagers)
+            {
+                playerTeamManager.RecheckCivilians();
+            }
+            foreach (var playerTeamManager in playerTeamManagersAI)
             {
                 playerTeamManager.RecheckCivilians();
             }
