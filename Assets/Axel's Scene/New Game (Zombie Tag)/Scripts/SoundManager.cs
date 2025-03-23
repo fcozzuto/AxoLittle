@@ -4,8 +4,11 @@ using System.Collections;
 public class SoundManager : MonoBehaviour
 {
     public AudioSource audioSource; // Assign this in the Inspector
-    public AudioClip loopClip; // Assign the initial audio clip in the Inspector
-    public AudioClip winningMusic;
+    public AudioClip loopClip; // The initial background music (before win)
+    public AudioClip AxolotlWinningMusic; // The temporary sound before looping again
+    public AudioClip AxolotlLoopedWinningMusic; // The final music that will loop after winning
+    public AudioClip FrogWinningMusic; // The temporary sound before looping again
+    public AudioClip FrogLoopedWinningMusic; // The final music that will loop after winning
 
     void Start()
     {
@@ -13,7 +16,7 @@ public class SoundManager : MonoBehaviour
         {
             audioSource.clip = loopClip;
             audioSource.loop = true; // Enable looping
-            audioSource.Play(); // Start playing the sound
+            audioSource.Play(); // Start playing the initial music
         }
         else
         {
@@ -21,16 +24,19 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void TriggerWin()
+    public void TriggerWin(string Team)
     {
-        FadeToNewMusic(winningMusic);
+        if(Team == "Axolotl")
+            FadeToNewMusic(AxolotlWinningMusic, AxolotlLoopedWinningMusic);
+        if (Team == "Frog")
+            FadeToNewMusic(FrogWinningMusic, FrogLoopedWinningMusic);
     }
 
-    public void FadeToNewMusic(AudioClip newClip, float fadeDuration = 3f)
+    public void FadeToNewMusic(AudioClip newClip, AudioClip nextLoopClip, float fadeDuration = 3f)
     {
-        if (audioSource != null && newClip != null)
+        if (audioSource != null && newClip != null && nextLoopClip != null)
         {
-            StartCoroutine(FadeOutAndChangeMusic(newClip, fadeDuration));
+            StartCoroutine(FadeOutAndPlayNewMusic(newClip, nextLoopClip, fadeDuration));
         }
         else
         {
@@ -38,7 +44,7 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    private IEnumerator FadeOutAndChangeMusic(AudioClip newClip, float fadeDuration)
+    private IEnumerator FadeOutAndPlayNewMusic(AudioClip newClip, AudioClip nextLoopClip, float fadeDuration)
     {
         float startVolume = audioSource.volume;
 
@@ -51,6 +57,7 @@ public class SoundManager : MonoBehaviour
 
         audioSource.Stop();
         audioSource.clip = newClip;
+        audioSource.loop = false; // Don't loop the temporary music
         audioSource.Play();
 
         // Fade in new music
@@ -61,7 +68,16 @@ public class SoundManager : MonoBehaviour
         }
 
         audioSource.volume = startVolume; // Ensure the final volume is set correctly
+
+        // Wait for the new clip to finish
+        yield return new WaitForSeconds(newClip.length);
+
+        // Start the final looping music
+        audioSource.clip = nextLoopClip;
+        audioSource.loop = true; // Loop the final background music
+        audioSource.Play();
     }
 }
+
 
 

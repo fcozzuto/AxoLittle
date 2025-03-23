@@ -4607,6 +4607,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7312902934816524187, guid: b0ba35bb2d910f440873875f107f8781, type: 3}
+      propertyPath: FrogWinningMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 5a5518a27a0d62a43a66574cbc11fad1, type: 3}
+    - target: {fileID: 7312902934816524187, guid: b0ba35bb2d910f440873875f107f8781, type: 3}
+      propertyPath: AxolotlWinningMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: e16582d7a95e77c43bf96729f1ceae18, type: 3}
+    - target: {fileID: 7312902934816524187, guid: b0ba35bb2d910f440873875f107f8781, type: 3}
+      propertyPath: FrogLoopedWinningMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 78829ee0de84a1144bdd897b4652bab5, type: 3}
+    - target: {fileID: 7312902934816524187, guid: b0ba35bb2d910f440873875f107f8781, type: 3}
+      propertyPath: AxolotlLoopedWinningMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: 9e65d5292989c704bbe927cdfb6f12a2, type: 3}
     - target: {fileID: 7739103380679012552, guid: b0ba35bb2d910f440873875f107f8781, type: 3}
       propertyPath: m_Volume
       value: 0.1
