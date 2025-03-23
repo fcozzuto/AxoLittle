@@ -18,6 +18,8 @@ public class Civilian : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip ConversionSound;
 
+    public Animator animator;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,6 +28,7 @@ public class Civilian : MonoBehaviour
         civilianAI = GetComponent<CivilianAI>();
         playerTeamManagers = FindObjectsOfType<PlayerTeamManager>();
         timer = FindAnyObjectByType<GameTimer>();
+        animator = GetComponent<Animator>();
     }
 
     private void Update()
@@ -101,17 +104,19 @@ public class Civilian : MonoBehaviour
         if (ConversionRateTowardsBU > 1f)
         {
             Team = "BU";
-            spriteRenderer.color = new Color(0.345f, 0.173f, 0.514f); // RGB(88, 44, 131)
+            spriteRenderer.color = new Color(154/255f, 189/255f, 60/255f); // RGB(88, 44, 131)
             Debug.Log("Switched to the BU Team");
             AudioSource.PlayClipAtPoint(ConversionSound, transform.position);
+            animator.SetTrigger("Infect");
         }
 
         else if (ConversionRateTowardsUDS > 1f)
         {
             Team = "UDS";
-            spriteRenderer.color = new Color(0.282f, 0.416f, 0.361f); // RGB(72, 106, 92)
+            spriteRenderer.color = new Color(239/255f, 184/255f, 181/255f); // RGB(72, 106, 92)
             Debug.Log("Switched to the UDS Team");
             AudioSource.PlayClipAtPoint(ConversionSound, transform.position);
+            animator.SetTrigger("Infect");
         }
 
         foreach (var player in playerTeamManagers)

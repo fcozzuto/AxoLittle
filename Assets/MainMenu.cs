@@ -15,7 +15,7 @@ public class MainMenu : MonoBehaviour
 
     private IEnumerator StartGame()
     {
-        AudioSource.PlayClipAtPoint(HeavyClick, transform.position);
+        AudioSource.PlayOneShot(HeavyClick);
         yield return new WaitForSeconds(2f);
         SceneManager.LoadScene("AxelScene");
     }

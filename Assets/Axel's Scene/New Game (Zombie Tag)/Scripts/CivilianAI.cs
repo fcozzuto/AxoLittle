@@ -35,6 +35,9 @@ public class CivilianAI : MonoBehaviour
     public float chanceToWoo = 0.001f;
 
     public GameTimer timer;
+    public Animator animator;
+
+    public GameObject Smoke;
 
     public string Category; // Can hold different values: "Normal", "Bomber", "Curling"
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -45,6 +48,7 @@ public class CivilianAI : MonoBehaviour
         noiseOffsetY = UnityEngine.Random.Range(0f, 100f);
 
         timer = FindAnyObjectByType<GameTimer>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -151,8 +155,11 @@ public class CivilianAI : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(explosionSound, transform.position);
         }
+        animator.SetTrigger("Explode");
         // Wait for 3 seconds before exploding
         yield return new WaitForSeconds(3f);
+
+        Instantiate(Smoke, transform.position, Quaternion.identity);
 
         foreach (var civilian in playerTeam.civilians)
         {
