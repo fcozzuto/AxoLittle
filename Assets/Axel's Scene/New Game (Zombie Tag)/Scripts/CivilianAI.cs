@@ -26,6 +26,12 @@ public class CivilianAI : MonoBehaviour
 
     private bool isCurling = false; // To ensure we don't trigger multiple movements at once
 
+    private bool hasExploded = false;
+    public AudioClip explosionSound;
+    public AudioClip ahSound;
+
+    public float chanceToAh = 0.001f;
+
     public string Category; // Can hold different values: "Normal", "Bomber", "Curling"
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -38,6 +44,10 @@ public class CivilianAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        float randomValue = UnityEngine.Random.Range(0f, 1f);
+        if (randomValue < chanceToAh)
+            AudioSource.PlayClipAtPoint(ahSound, transform.position);
+
         // in like the update, when the chars are moving
         transform.rotation = Quaternion.Euler(0, 0, Mathf.Sin(50 * Time.time));
         if (player != null)
@@ -112,21 +122,38 @@ public class CivilianAI : MonoBehaviour
 
     private void Explode()
     {
+        if (!hasExploded)
+        {
+            hasExploded = true;
+            StartCoroutine(ExplodeAfterDelay());
+        }
+    }
+
+    private IEnumerator ExplodeAfterDelay()
+    {
+        if (explosionSound != null)
+        {
+            AudioSource.PlayClipAtPoint(explosionSound, transform.position);
+        }
+        // Wait for 3 seconds before exploding
+        yield return new WaitForSeconds(3f);
+
         foreach (var civilian in playerTeam.civilians)
         {
-            distance = Vector2.Distance(transform.position, civilian.gameObject.transform.position);
+            float distance = Vector2.Distance(transform.position, civilian.gameObject.transform.position);
             if (distance < explosionRadius && civilian.Team != RefToCivilian.Team)
             {
                 civilian.Convert(99999999f, RefToCivilian.Team);
                 SpriteRenderer spriteRenderer = RefToCivilian.GetComponent<SpriteRenderer>();
                 if (spriteRenderer != null)
                 {
-                    spriteRenderer.sprite = RefToCivilian.RegularSprite;  // Assuming "newSprite" is a field in Civilian
+                    spriteRenderer.sprite = RefToCivilian.RegularSprite;  // Assuming "RegularSprite" is a field in Civilian
                     Category = "Normal";
                 }
             }
         }
     }
+
 
     private void Curling(GameObject target)
     {
@@ -138,10 +165,13 @@ public class CivilianAI : MonoBehaviour
 
     private IEnumerator MoveAndConvert(GameObject target)
     {
+        // Ensure it turns back after 5 seconds, no matter what
+        StartCoroutine(ResetAfterTime(5f));
+
         // Find the direction vector between this object and the target
         Vector2 direction = (target.transform.position - transform.position).normalized;
 
-        float forceAmount = 1f; // You can adjust this value to control the force applied
+        float forceAmount = 1f; // Adjust to control the force applied
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
 
         if (rb != null)
@@ -157,46 +187,63 @@ public class CivilianAI : MonoBehaviour
 
             // Once a wall is hit, stop the movement and handle logic
             Debug.Log("Hit a wall or other object");
-
-            // Optional: Change sprite or perform any other necessary actions
-            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
-            if (spriteRenderer != null)
-            {
-                spriteRenderer.sprite = RefToCivilian.RegularSprite;  // Update to the desired sprite
-            }
-            Category = "Normal";
+            StopCurling();
         }
         else
         {
             Debug.LogError("Rigidbody2D is missing on this object.");
         }
-
-        isCurling = false;  // Movement has ended
     }
 
     private bool IsCollidingWithWall()
     {
-        // Use a raycast to check if the object is colliding with something (e.g., a wall)
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, 0.5f); // Change direction as needed
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, 0.5f); // Adjust direction as needed
 
-        // If the raycast hits an object tagged "Wall", we stop the movement
-        if (hit.collider != null && hit.collider.CompareTag("Wall"))
+        if (hit.collider != null)
         {
-            return true;
-        }
-
-        // If we hit an enemy, convert the enemy (if it's in the player's team)
-        if (hit.collider != null && hit.collider.CompareTag("Civilian"))
-        {
-            Civilian enemy = hit.collider.GetComponent<Civilian>();
-            if (enemy != null && enemy.Team != RefToCivilian.Team)
+            if (hit.collider.CompareTag("Wall"))
             {
-                // Convert enemy and apply necessary logic
-                enemy.Convert(99999999f, RefToCivilian.Team);
-                Debug.Log("Enemy converted!");
+                return true;
+            }
+
+            if (hit.collider.CompareTag("Civilian"))
+            {
+                Civilian enemy = hit.collider.GetComponent<Civilian>();
+                if (enemy != null && enemy.Team != RefToCivilian.Team)
+                {
+                    enemy.Convert(99999999f, RefToCivilian.Team);
+                    Debug.Log("Enemy converted!");
+                }
             }
         }
 
         return false;
     }
+
+    // Resets the object after 5 seconds
+    private IEnumerator ResetAfterTime(float time)
+    {
+        yield return new WaitForSeconds(time);
+        StopCurling();
+    }
+
+    // Handles resetting to civilian state
+    private void StopCurling()
+    {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero; // Stop movement
+        }
+
+        SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+        if (spriteRenderer != null)
+        {
+            spriteRenderer.sprite = RefToCivilian.RegularSprite;
+        }
+
+        Category = "Normal";
+        isCurling = false;
+    }
+
 }
