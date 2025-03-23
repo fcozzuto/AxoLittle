@@ -147,8 +147,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 5158404753353345565, guid: 2c861aa6b64317749b06d1eada366008, type: 3}
-  m_Color: {r: 0.28235295, g: 0.41568628, b: 0.36078432, a: 1}
+  m_Sprite: {fileID: 5171518235179766757, guid: 8ee78e045f8449244be3ea64d6c915a9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -255,6 +255,7 @@ MonoBehaviour:
   ConversionRadius: 1
   civilians: []
   followPoint: {fileID: 7753494356503580570}
+  timer: {fileID: 0}
 --- !u!114 &7929534194428881408
 MonoBehaviour:
   m_ObjectHideFlags: 0

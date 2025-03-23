@@ -107,7 +107,6 @@ GameObject:
   - component: {fileID: 3138748681175663171}
   - component: {fileID: 874085946139675822}
   - component: {fileID: 2384476733066605327}
-
   - component: {fileID: 2767362817230824028}
   - component: {fileID: 6275937693058756663}
   m_Layer: 0
@@ -179,8 +178,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 76318030508473640, guid: e1ca1f6ad58185d45bebe1afcea7a4c4, type: 3}
-  m_Color: {r: 0.34509805, g: 0.17254902, b: 0.5137255, a: 1}
+  m_Sprite: {fileID: 8533748852153243735, guid: 6892a235ee24acf4fa35cd12edff90e2, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -287,6 +286,7 @@ MonoBehaviour:
   ConversionRadius: 1
   civilians: []
   followPoint: {fileID: 1025817539335333512}
+  timer: {fileID: 0}
 --- !u!114 &2767362817230824028
 MonoBehaviour:
   m_ObjectHideFlags: 0
