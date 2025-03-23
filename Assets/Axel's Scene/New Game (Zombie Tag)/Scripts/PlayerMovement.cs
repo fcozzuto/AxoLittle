@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -17,17 +18,11 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
-        // Get movement input from player
-        float moveX = Input.GetAxisRaw("Horizontal"); // A/D or Left/Right Arrow
-        float moveY = Input.GetAxisRaw("Vertical");   // W/S or Up/Down Arrow
+        moveInput = new Vector2(moveInput.x, moveInput.y).normalized;
 
-        moveInput = new Vector2(moveX, moveY).normalized; // Normalize to prevent diagonal speed boost
-        if(moveX != 0 || moveY != 0)
-            transform.rotation = Quaternion.Euler(0, 0, Mathf.Sin(50 * Time.time));
-
-        if (moveX == 1)
+        if (moveInput.x == 1)
             FollowPoint.transform.position = FollowPointL.transform.position;
-        else if (moveX == -1)
+        else if (moveInput.x == -1)
             FollowPoint.transform.position = FollowPointR.transform.position;
 
     }
@@ -36,6 +31,12 @@ public class PlayerMovement : MonoBehaviour
     {
         // Move the player using Rigidbody2D
         rb.linearVelocity = moveInput * moveSpeed;
+    }
+
+    public void OnMove(InputAction.CallbackContext context)
+    {
+        moveInput = context.ReadValue<Vector2>();
+        Debug.Log("Move Input: " + moveInput);
     }
 }
 
