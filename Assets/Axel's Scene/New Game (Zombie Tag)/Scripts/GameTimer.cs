@@ -86,7 +86,7 @@ public class GameTimer : MonoBehaviour
             Team1Score.text = "Player1 Score : " + team1Amount.ToString();
             Team2Score.text = "Player2 Score : " + team2Amount.ToString();
 
-            Debug.Log("Game is over");
+            // Debug.Log("Game is over");
 
             // Only spawn the teams if they haven't been spawned already
             hasSpawned = true;
