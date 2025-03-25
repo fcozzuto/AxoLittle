@@ -12,12 +12,34 @@ public class MainMenu : MonoBehaviour
     {
         StartCoroutine(StartGame());
     }
+    public void PlayMultiGame()
+    {
+        StartCoroutine(StartMultiGame());
+    }
+    public void OpenCreditsScene()
+    {
+        StartCoroutine(OpenCredits());
+    }
 
     private IEnumerator StartGame()
     {
         AudioSource.PlayOneShot(HeavyClick);
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         SceneManager.LoadScene("AxelScene");
+    }
+
+    private IEnumerator StartMultiGame()
+    {
+        AudioSource.PlayOneShot(HeavyClick);
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("WilliamScene");
+    }
+
+    public IEnumerator OpenCredits()
+    {
+        AudioSource.PlayOneShot(HeavyClick);
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene("ScrollingCredits");
     }
 
     public void QuitGame()

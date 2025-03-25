@@ -103,8 +103,8 @@ public class GameTimer : MonoBehaviour
             }
 
             // Display the scores
-            Team1Score.text = "Player1 Score : " + team1Amount.ToString();
-            Team2Score.text = "Player2 Score : " + team2Amount.ToString();
+            Team1Score.text = team1Amount.ToString();
+            Team2Score.text = team2Amount.ToString();
 
             // Debug.Log("Game is over");
 

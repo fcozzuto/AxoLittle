@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class PlayerMovementAI : MonoBehaviour
 {
-    public float moveSpeed = 5f; // Speed of the player
+    public float moveSpeed = 3f; // Speed of the player
     private Rigidbody2D rb;
     private Vector2 moveDirection;
 

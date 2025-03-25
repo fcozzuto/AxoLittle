@@ -108,7 +108,7 @@ MonoBehaviour:
   Team: 
   ConversionRateTowardsBU: 0
   ConversionRateTowardsUDS: 0
-  Loyalty: 0.1
+  Loyalty: 0.5
   RegularSprite: {fileID: 7138015396548512742, guid: 33aa693d74db82b4fa4a759c7a7c3f9d, type: 3}
   timer: {fileID: 0}
   audioSource: {fileID: 6967271763361968400}
@@ -130,7 +130,7 @@ MonoBehaviour:
   playerTeam: {fileID: 0}
   player: {fileID: 0}
   speed: 2
-  ConversionSpeed: 0.01666667
+  ConversionSpeed: 0.01
   ConversionRadius: 1
   chasingThreshold: 5
   explosionRadius: 3

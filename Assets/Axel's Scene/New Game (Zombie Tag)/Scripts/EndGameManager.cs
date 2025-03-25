@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -10,6 +11,7 @@ public class EndGameManager : MonoBehaviour
     private List<SpecialCivilian> SpecialCiviliansUDS = new List<SpecialCivilian>();
 
     public GameObject ParticlesEnd;
+    public TextMeshProUGUI quitText;
     private bool isGameOver = false;
 
     void Start()
@@ -76,6 +78,7 @@ public class EndGameManager : MonoBehaviour
     {
         isGameOver = true;
         Instantiate(ParticlesEnd, transform.position, Quaternion.identity);
+        quitText.gameObject.SetActive(true);
         Debug.Log("Game is over!");
     }
 }
