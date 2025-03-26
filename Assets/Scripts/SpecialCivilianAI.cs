@@ -32,17 +32,24 @@ public class SpecialCivilianAI : MonoBehaviour
         transform.rotation = Quaternion.Euler(0, 0, Mathf.Sin(50 * Time.time));
         if (civilians != null)
         {
-            Boolean EnemyFound = false;
+            float smallestDist = float.MaxValue;
+            SpecialCivilian closestCiv = null;
             foreach (var civilian in civilians)
             {
                 float distanceToCivilian = Vector2.Distance(transform.position, civilian.gameObject.transform.position);
                 if (civilian.Team != RefToCivilian.Team)
                 {
-                    EnemyFound = true;
-                    FollowEnemy(civilian);
-                    Debug.Log("Targetting enemy");
-                    break;
+                    if(distanceToCivilian < smallestDist)
+                    {
+                        smallestDist = distanceToCivilian;
+                        closestCiv = civilian;
+                    }
                 }
+            }
+            if (closestCiv != null)
+            {
+                FollowEnemy(closestCiv);
+                Debug.Log("Targetting closest enemy");
             }
         }
     }

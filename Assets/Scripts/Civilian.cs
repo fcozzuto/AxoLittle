@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class Civilian : MonoBehaviour
@@ -16,9 +17,12 @@ public class Civilian : MonoBehaviour
     public GameTimer timer;
 
     public AudioSource audioSource;
+    public AudioSource convertAudioSource;
     public AudioClip ConversionSound;
 
     public Animator animator;
+
+    private bool IsBeingConverted = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -101,28 +105,39 @@ public class Civilian : MonoBehaviour
 
     public void CheckForTeam()
     {
-        if (ConversionRateTowardsBU > 1f)
+        if (ConversionRateTowardsBU > 1f && !IsBeingConverted)
         {
-            Team = "BU";
-            spriteRenderer.color = new Color(154/255f, 189/255f, 60/255f); // RGB(88, 44, 131)
-            Debug.Log("Switched to the BU Team");
-            AudioSource.PlayClipAtPoint(ConversionSound, transform.position);
-            animator.SetTrigger("Infect");
+            StartCoroutine(ConvertToTeam("BU", new Color(154 / 255f, 189 / 255f, 60 / 255f)));
         }
-
-        else if (ConversionRateTowardsUDS > 1f)
+        else if (ConversionRateTowardsUDS > 1f && !IsBeingConverted)
         {
-            Team = "UDS";
-            spriteRenderer.color = new Color(239/255f, 184/255f, 181/255f); // RGB(72, 106, 92)
-            Debug.Log("Switched to the UDS Team");
-            AudioSource.PlayClipAtPoint(ConversionSound, transform.position);
-            animator.SetTrigger("Infect");
+            StartCoroutine(ConvertToTeam("UDS", new Color(239 / 255f, 184 / 255f, 181 / 255f)));
         }
 
         foreach (var player in playerTeamManagers)
         {
-            if(player.Team == Team)
+            if (player.Team == Team)
                 civilianAI.setFollow(player);
         }
+    }
+
+    private IEnumerator ConvertToTeam(string newTeam, Color newColor)
+    {
+        IsBeingConverted = true;
+        Team = newTeam;
+        spriteRenderer.color = newColor;
+        Debug.Log($"Switched to the {newTeam} Team");
+
+        if (convertAudioSource != null && ConversionSound != null)
+        {
+            Debug.Log("Playing sound!");
+            convertAudioSource.PlayOneShot(ConversionSound);
+        }
+
+        animator.SetTrigger("Infect");
+
+        yield return new WaitForSeconds(1f); // Prevents immediate re-conversion
+
+        IsBeingConverted = false;
     }
 }

@@ -58,7 +58,7 @@ public class CivilianAI : MonoBehaviour
         {
             if (timer.gameOver)
             {
-                this.gameObject.SetActive(false);
+                Destroy(this.gameObject);
             }
         }
 
@@ -78,9 +78,17 @@ public class CivilianAI : MonoBehaviour
                 float distanceToCivilian = Vector2.Distance(transform.position, civilian.gameObject.transform.position);
                 if (civilian.Team != RefToCivilian.Team && distanceToCivilian < chasingThreshold)
                 {
-                    EnemyFound = true;
-                    FollowEnemy(civilian);
-                    break;
+                    if (isCurling)
+                    {
+                        civilian.Convert(99999999f, RefToCivilian.Team);
+                        break;
+                    }
+                    else
+                    {
+                        EnemyFound = true;
+                        FollowEnemy(civilian);
+                        break;
+                    }
                 }
             }
             if(!EnemyFound)
@@ -189,24 +197,14 @@ public class CivilianAI : MonoBehaviour
     private IEnumerator MoveAndConvert(GameObject target)
     {
         // Ensure it turns back after 5 seconds, no matter what
-        StartCoroutine(ResetAfterTime(5f));
-
-        // Find the direction vector between this object and the target
-        Vector2 direction = (target.transform.position - transform.position).normalized;
-
-        float forceAmount = 1f; // Adjust to control the force applied
+        StartCoroutine(ResetAfterTime(2f));
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+        StartCoroutine(Propulse(target));
 
         if (rb != null)
         {
-            // Continuously apply force in the direction of the target
-            while (!IsCollidingWithWall())
-            {
-                rb.AddForce(direction * forceAmount, ForceMode2D.Impulse);
-
-                // Check for any collisions during movement
-                yield return null; // Wait until the next frame to continue movement
-            }
+            yield return new WaitForSeconds(2f);
 
             // Once a wall is hit, stop the movement and handle logic
             Debug.Log("Hit a wall or other object");
@@ -218,29 +216,18 @@ public class CivilianAI : MonoBehaviour
         }
     }
 
-    private bool IsCollidingWithWall()
+    private IEnumerator Propulse(GameObject target)
     {
-        RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.right, 0.5f); // Adjust direction as needed
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb == null) yield break;
 
-        if (hit.collider != null)
-        {
-            if (hit.collider.CompareTag("Wall"))
-            {
-                return true;
-            }
+        Vector2 direction = (target.transform.position - transform.position).normalized;
+        float forceAmount = 30f; // Increase force for more noticeable movement
 
-            if (hit.collider.CompareTag("Civilian"))
-            {
-                Civilian enemy = hit.collider.GetComponent<Civilian>();
-                if (enemy != null && enemy.Team != RefToCivilian.Team)
-                {
-                    enemy.Convert(99999999f, RefToCivilian.Team);
-                    Debug.Log("Enemy converted!");
-                }
-            }
-        }
+        rb.linearVelocity = direction * forceAmount; // Apply force once as velocity
 
-        return false;
+        yield return new WaitForSeconds(2f); // Wait before stopping
+        StopCurling(); // Ensure curling stops properly
     }
 
     // Resets the object after 5 seconds
@@ -266,7 +253,7 @@ public class CivilianAI : MonoBehaviour
         }
 
         Category = "Normal";
+        rb.linearVelocity = Vector2.zero;  // Stops all movement
         isCurling = false;
     }
-
 }
